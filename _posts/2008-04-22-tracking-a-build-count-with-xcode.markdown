@@ -5,11 +5,10 @@ categories: xCode
 type: post
 ---
 
-This article applies to people working on a solo project who want to track how many times they have gone through the infamous edit, compile, run and test cycle.  Once you have written one or two simple applications you may have come to the obvious conclusion that building good software takes time.
 
 ### Executive summary
 
-Your time is not infinite and it is valuable to know where you are spending it.  What I'm going to show you is how to increment a counter by adding a **Run Script Phase** to your project.  This script generates a .xcconfig file which we then use to put the build number directly in the about box.
+Your time is finite and it is valuable to know where you are spending it.  What I'm going to show you is how to increment a counter by adding a **Run Script Phase** to your project.  This script generates a .xcconfig file which we then use to put the build number directly in the about box.
 
 ### Some data from my projects
 
@@ -21,28 +20,26 @@ I first started using this technique with [Laughing Man][LaughingMan] but not un
 
 <img src="/notcocoa/images/sflowerbuildchart.jpg"  />
 
-I find this information very useful because I can correlate it with the difference in lines of code and what changes were made in that version.  This can give valuable perspective on whether that "easy new feature" or change was really that easy.   It also helps to roughly gauge whether your standard for quality of work has gone up.
+I find this information fascinating because I can correlate it with the difference in lines of code and what changes were made in that version.  This can give valuable perspective on whether that "easy new feature" or change was really that easy.   It also helps to roughly gauge whether your standard for quality of work has gone up.
 
 <img src="/notcocoa/images/sflowerbuildgraph.jpg" />
 
-You will notice that for SunFlower, there is a major spike for version 0.5 and 0.8.  In both cases I know why those versions took so many builds.  0.8, for instance is when I introduced the iTunes style scrollbar which took much work to refine.
+You will notice that for SunFlower, there is a major spike for version 0.5 and 0.8.  In both cases I know why those versions took so many builds.  0.8, for instance introduced  a new cusomt GUI component which took much work to refine.
 
 ### The incrementing shell script
 
-The first thing we need is something to increment our build number.  The shell script  listing below does just that.  It requires one parameter, which is the name of the file used to store the current build number.  This allows us to use this script for multiple projects at the same time.
+The first thing we need is something to increment our build number.  The shell script listing below does just that.  It requires one parameter, the name of the file used to store the current build number.  This allows us to use this script for multiple projects at the same time.
 
 {% highlight sh %}
 #!/bin/bash
 #
 # buildIncrementer
-#  -- a simple script to increment the
-#      build number through Xcode
 #
 if [ -e "$1" ]
 then
   echo " do nothing" > /dev/null
 else
-  # creat an empty file
+  # create an empty file
   touch $1
 fi
 

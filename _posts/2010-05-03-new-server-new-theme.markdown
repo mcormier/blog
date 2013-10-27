@@ -1,5 +1,5 @@
 --- 
-layout: post
+layout: oneColumnPost
 title: Fresh Location, Fresh Theme
 categories: 
 - Website Update

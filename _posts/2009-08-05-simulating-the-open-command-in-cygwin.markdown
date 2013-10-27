@@ -1,5 +1,5 @@
 --- 
-layout: post
+layout: oneColumnPost
 title: Simulating the open command in cygwin
 categories: 
 - Mondo Kode

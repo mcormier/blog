@@ -1,5 +1,5 @@
 --- 
-layout: post
+layout: oneColumnPost
 title: Using Image Visualization to Find the Perfect Pad
 categories: 
 - User Interface

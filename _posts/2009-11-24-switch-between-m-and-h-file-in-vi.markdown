@@ -1,5 +1,5 @@
 --- 
-layout: post
+layout: oneColumnPost
 title: Switch between .m and .h file in VI
 categories: 
 - Mondo Kode
