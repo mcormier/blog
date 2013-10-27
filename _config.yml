@@ -1,0 +1,9 @@
+name: Not Cocoa Mondo
+markdown: redcarpet
+destination: ../notcocoa
+pygments: true
+
+
+# For the RSS generator
+url: http://blog.preenandprune.com
+author: Matthieu Cormier
