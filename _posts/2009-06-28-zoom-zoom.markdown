@@ -1,0 +1,78 @@
+--- 
+layout: post
+title: Zoom Zoom
+categories: 
+- Mondo Kode
+tags: []
+
+status: trash
+type: post
+published: false
+meta: 
+  _edit_last: "1"
+  _wp_trash_meta_status: publish
+  _wp_trash_meta_time: "1381772835"
+---
+In my last post I presented some kode for creating a <a href="http://www.preenandprune.com/cocoamondo/?p=468">custom migration manager</a>.  The kode has some sweet syntax colour highlighting courtesy of a WordPress plugin called <a href="http://wordpress.org/extend/plugins/wp-syntax/">wp-syntax</a>.
+
+To keep the original format of the kode, wp_syntax uses a scrollable div.  This works, but isn't ideal, especially when the content column is narrow, like the current layout of this blog.  So on several occasions, I've caught myself editing kode so that it would fit more cleanly in a narrow column, for the benefit of the reader.
+
+I don't like boring and tedious tasks so I contemplated restructuring this blog so that the content column would be wider to help eliminate this problem.  But there is a reason why I like a narrow column.   A narrow column of text is easier to read because your mind doesn't have to work as hard when moving to the next line.  When the line length is too long, reading is more difficult.  This concept applies to kode, but I feel the comfortable line length is much longer for various reasons.  For example, in Objective-C you are probably chunking alloc/init calls that occur on one line.
+
+Essentially when I embed kode into this blog there are two ideal content block sizes that I want.  So I wrote a WordPress plugin to solve the problem.
+
+The kode below uses the MondoKode-Zoomer plugin.
+
+<pre lang="objC" zoom="yes">
+- (BOOL)migrationNeeded {
+  return ! ( currentStoreModel == [objectModels count] );
+}
+
+- (BOOL)migrateIfNeeded:(NSError**)error {
+
+  if ( ! [self migrationNeeded] ) {
+    return YES; }
+
+  // Backup the store before we do anything
+  NSString* backupFilePath = [[storeURL path] stringByAppendingString:@".backup"];
+  if( ![self overWriteCopy:[storeURL path] to:backupFilePath error:error] ) {
+    return NO;
+  }
+
+  NSDictionary *opts =
+  [NSDictionary dictionaryWithObject:[NSNumber numberWithBool:YES]
+                              forKey:NSMigratePersistentStoresAutomaticallyOption];
+  NSInteger i;
+  NSURL* tempURL = [NSURL fileURLWithPath:[[storeURL path] stringByAppendingString:@".temp"]];
+
+  for( i = currentStoreModel; i < [objectModels count] - 1; i++ ) {
+    // Migrate the store to a temp file.
+    // SunFlower.xml --> SunFlower.xml.temp
+    BOOL migrationSuccess = [[self migrationManagerForIndex:i]
+                               migrateStoreFromURL:storeURL type:NSXMLStoreType options:opts
+                               withMappingModel:[self mappingModelForIndex:i]
+                               toDestinationURL:tempURL
+                              destinationType:NSXMLStoreType destinationOptions:opts
+                               error:error];
+
+    // Revert and return if:
+    // 1.) The migration failed.
+    // 2.) The temp file could not be copied over the original.
+    // 3.) The temp file could not be deleted.
+    if (! migrationSuccess ||
+        ! [self overWriteCopy:[tempURL path] to:[storeURL path] error:error] ||
+        ! [[NSFileManager defaultManager]  removeItemAtPath:[tempURL path] error:error]) {
+      // Revert to backup file and exit
+      // Not passing an error because we want to propogate the previous error.
+      [self overWriteCopy:backupFilePath to:[storeURL path]  error:NULL];
+      return NO;
+    }
+  }
+
+  return YES;
+}
+</pre>
+
+I've posted the source on <a href="http://github.com/mcormier/MondoKode-zoomer/tree/master">GitHub</a>.  Currently it's not a drop and run install.  You need to overwrite the wp-syntax.php file in the wp-syntax plugin.  I plan on contacting the author of wp-syntax to see if he can help make this addition officially supported.
+
+Happy Koding

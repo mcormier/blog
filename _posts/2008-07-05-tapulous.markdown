@@ -1,0 +1,21 @@
+--- 
+layout: post
+title: Tapulous
+categories: 
+- iPhone
+- Website Update
+tags: []
+
+status: trash
+type: post
+published: false
+meta: 
+  _edit_last: "1"
+  _wp_trash_meta_status: publish
+  _wp_trash_meta_time: "1381772693"
+---
+The <a href="http://www.tapulous.com/">Tapulous</a> web page has changed from a teaser page, to a teaser page that names the iPhone applications that will be available.  A link to a <a href="http://tapulous.com/blog/">blog</a> has been added.  The blog has a youtube video of the tap tap game.
+
+<img src="http://173.203.83.44/cocoamondo/wp-content/uploads/2008/07/tapper.jpg" alt="Tapulous web page" title="tapper" width="465" height="197" class="aligncenter size-full wp-image-27" />
+
+Site change discovered with <a href="http://sunflower.preenandprune.com">SunFlower</a>.
