@@ -77,6 +77,8 @@ If you want to support file drags you have to add some more kode and some more g
 </array>
 {% endhighlight %}
 
+
+
 {% highlight objc %}
 - (id) init {
   if ((self = [super init])) {
@@ -97,6 +99,6 @@ If you want to support file drags you have to add some more kode and some more g
 
 This supports dragging files onto the application icon when it is not running and outside of the dock. Responding to an action, such as dragging some data to the application when the application is not running but in the dock, is left as an exercise for the reader.
 
-If you’re too lazy to set this up (and laziness is a common trait for excellent koders) <a href='http://173.203.83.44/cocoamondo/wp-content/uploads/2008/08/dockdrop.zip'>download this self-contained xCode project</a>.
+If you’re too lazy to set this up (and laziness is a common trait for excellent koders) <a href='/notcocoa/dwnlds/dockdrop.zip'>download this self-contained xCode project</a>.
 
 Happy Koding,

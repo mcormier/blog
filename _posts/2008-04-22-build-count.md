@@ -1,16 +1,16 @@
 --- 
 layout: post
-title: Tracking a build count with xCode
-categories: xCode
+title: Tracking a build count 
 type: post
+
 ---
 
 
-### Executive summary
+## Executive summary
 
 Your time is finite and it is valuable to know where you are spending it.  What I'm going to show you is how to increment a counter by adding a **Run Script Phase** to your project.  This script generates a .xcconfig file which we then use to put the build number directly in the about box.
 
-### Some data from my projects
+## Some data from my projects
 
 I first started using this technique with [Laughing Man][LaughingMan] but not until five versions had been released.
 
@@ -26,7 +26,7 @@ I find this information fascinating because I can correlate it with the differen
 
 You will notice that for SunFlower, there is a major spike for version 0.5 and 0.8.  In both cases I know why those versions took so many builds.  0.8, for instance introduced  a new cusomt GUI component which took much work to refine.
 
-### The incrementing shell script
+## The incrementing shell script
 
 The first thing we need is something to increment our build number.  The shell script listing below does just that.  It requires one parameter, the name of the file used to store the current build number.  This allows us to use this script for multiple projects at the same time.
 
