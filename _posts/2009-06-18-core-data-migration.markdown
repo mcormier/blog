@@ -1,23 +1,21 @@
 --- 
 layout: post
 title: Core Data Migration
-categories: 
-- Core Data
-- Mondo Kode
-tags: []
-
-status: publish
-type: post
-published: true
-meta: 
-  _edit_last: "1"
 ---
+
 One of the wonderful things about Core Data is that it provides a versioning mechanism that makes it easier to migrate your data if the model has changed from release to release. Apple has a guide called the <a href="http://developer.apple.com/documentation/Cocoa/Conceptual/CoreDataVersioning/Introduction/Introduction.html#//apple_ref/doc/uid/TP40004403">"<em>Core Data Model Versioning and Data Migration Programming Guide</em>" </a> with useful info on this.
 
-To use Core Data versioning support you need to be using Mac OS X v10.5 and your model file needs to be a <code>.xcdatamodeld</code> file type. That last "<strong>d</strong>" in the file type stands for directory; and it's a directory that contains<code> .xcdatamodel</code> files.
-<div class="note"><strong>Update: </strong> If Mac OS X v10.6 is your baseline target operating system you should try <a href="http://developer.apple.com/mac/library/documentation/Cocoa/Conceptual/CoreDataVersioning/Articles/vmLightweight.html">lightweight migration</a> instead of following this article. Use the new <a href="http://developer.apple.com/mac/library/documentation/Cocoa/Reference/CoreDataFramework/Classes/NSPersistentStoreCoordinator_Class/NSPersistentStoreCoordinator.html#//apple_ref/doc/c_ref/NSInferMappingModelAutomaticallyOption">NSInferMappingModelAutomaticallyOption</a> migration option.</div>
-<center><img class="alignnone  wp-image-481" style="border: 2px solid black;" title="modeld" src="http://www.preenandprune.com/cocoamondo/wp-content/uploads/2009/06/modeld.png" alt="modeld" border="2" /></center>Once you've created more than one version of your model you should support migrating old versions of the model to the new version. You can do this by passing the <code>NSMigratePersistentStoresAutomaticallyOption</code> option to <code>NSPersistentStoreCoordinator</code> when adding the persistent store and by creating a mapping model.
-<pre lang="objc">NSDictionary *optionsDictionary =
+To use Core Data versioning support you need to be using Mac OS X v10.5 and your model file needs to be a **.xcdatamodeld** file type. That last "**d**" in the file type stands for directory; and it's a directory that contains **.xcdatamodel** files.
+
+**Update:** If Mac OS X v10.6 is your baseline target operating system you should try <a href="http://developer.apple.com/mac/library/documentation/Cocoa/Conceptual/CoreDataVersioning/Articles/vmLightweight.html">lightweight migration</a> instead of following this article. Use the new <a href="http://developer.apple.com/mac/library/documentation/Cocoa/Reference/CoreDataFramework/Classes/NSPersistentStoreCoordinator_Class/NSPersistentStoreCoordinator.html#//apple_ref/doc/c_ref/NSInferMappingModelAutomaticallyOption">NSInferMappingModelAutomaticallyOption</a> migration option.
+
+<img style="border: 2px solid black;" title="modeld" 
+     src="/notcocoa/images/modeld.png" alt="modeld" />
+
+Once you've created more than one version of your model you should support migrating old versions of the model to the new version. You can do this by passing the **NSMigratePersistentStoresAutomaticallyOption** option to **NSPersistentStoreCoordinator** when adding the persistent store and by creating a mapping model.
+
+{% highlight objc %}
+NSDictionary *optionsDictionary =
 [NSDictionary
       dictionaryWithObject:[NSNumber numberWithBool:YES]
       forKey:NSMigratePersistentStoresAutomaticallyOption];
@@ -27,33 +25,45 @@ NSPersistentStore* store = [persistentStoreCoordinator
        configuration:nil
        URL:url
        options:optionsDictionary
-       error:&amp;error];
+       error:&error];
 
 if( store == nil ) {
     [[NSApplication sharedApplication] presentError:error];
     [[NSApplication sharedApplication] terminate:self];
-}</pre>
+}
+{% endhighlight %}
+
 Core Data will now magically convert the data from version 1 to version 2, if necessary when the program loads. You and your users will be happy. Everything is hunky-dory.
 
-<center><img class="alignnone  wp-image-489" title="mappingModel1" src="http://www.preenandprune.com/cocoamondo/wp-content/uploads/2009/06/mappingModel1.jpg" alt="mappingModel1" /></center>
-<h3>Where's the Beef?</h3>
+<img src="/notcocoa/images/mappingModel1.jpg" />
+
+## Where's the Beef? ##
 So far I've simply summarized Apple's documentation. What kind of blog is this anyway?
 
 Well, automatic migration isn't completely automatic. Let's add a third version of the data model with another model mapping and see what happens.
 
-<center><img class="alignnone  wp-image-493" title="mappingmodel2" src="http://www.preenandprune.com/cocoamondo/wp-content/uploads/2009/06/mappingmodel2.jpg" alt="mappingmodel2" /></center>Okay, we've added a data model and a mapping model to that data model from the previous. We've set version three as the current version of the data model and now have two test cases to try.
-<ul>
-	<li><strong>Case 1</strong>: Run with version 1 data and see if migration works</li>
-	<li><strong>Case 2</strong>: Run with version 2 data and see if migration works</li>
-</ul>
+<img src="/notcocoa/images/mappingmodel2.jpg" />
+
+Okay, we've added a data model and a mapping model to that data model from the previous. We've set version three as the current version of the data model and now have two test cases to try.
+
+- **Case 1:** Run with version 1 data and see if migration works
+-	**Case 2:** Run with version 2 data and see if migration works
+
 Testing shows that case 1 fails and case 2 passes. Case 1 fails because the automatic migration logic provided by Apple is very simple. It looks for a mapping model from the ol to the new version. If it can't find one then it stops.
 
-<center><img class="alignnone  wp-image-498" title="mappingmodel3" src="http://www.preenandprune.com/cocoamondo/wp-content/uploads/2009/06/mappingmodel3.jpg" alt="mappingmodel3" /></center>To solve this problem you can modify the mapping from version 1 to 2 to go from version 1 to 3. The problem with this solution is that as you get more versions of your data model you will have to modify more mapping models. To be specific, if you have N data models you will need to configure N - 1 mapping models.
-<h3>Custom Migration</h3>
+<img src="/notcocoa/images/mappingmodel3.jpg"/>
+
+To solve this problem you can modify the mapping from version 1 to 2 to go from version 1 to 3. The problem with this solution is that as you get more versions of your data model you will have to modify more mapping models. To be specific, if you have N data models you will need to configure N - 1 mapping models.
+
+## Custom Migration ##
 When N is large then so is N - 1, so modifying all those mapping models when we added one data model probably isn't the greatest solution; especially if we only added one attribute. We need custom migration code.
 
-<center><img class="alignnone  wp-image-505" title="mappingmodel4" src="http://www.preenandprune.com/cocoamondo/wp-content/uploads/2009/06/mappingmodel4.jpg" alt="mappingmodel4" /></center>First we need to modify the appDelegate class in the standard Core Data generated project to use a migration class. We'll create a migration object and tell it to do the migration if it needs to be done.
-<pre lang="objC">SFMigrationManager* migrator = [[SFMigrationManager alloc]
+<img src="/notcocoa/images/mappingmodel4.jpg"  />
+
+First we need to modify the appDelegate class in the standard Core Data generated project to use a migration class. We'll create a migration object and tell it to do the migration if it needs to be done.
+
+{% highlight objc %}
+SFMigrationManager* migrator = [[SFMigrationManager alloc]
       initWithModelName:@"SunFlower_DataModel"
       andXMLStoreURL:url];
 
@@ -72,9 +82,11 @@ if ( latestVersion ) {
 if (! latestVersion || store == nil){
   [[NSApplication sharedApplication] presentError:error];
   [[NSApplication sharedApplication] terminate:self];
-}</pre>
-Let's take a look at the <code>init</code> method for the class. The <code>init</code> method loads all the object models and figures out what model version the store is.
-<pre lang="objC">#define SFAssign(oldValue,newValue) \
+}
+{% endhighlight %}
+Let's take a look at the **init** method for the class. The **init** method loads all the object models and figures out what model version the store is.
+{% highlight objc %}
+#define SFAssign(oldValue,newValue) \
   [ newValue retain ]; \
   [ oldValue release ]; \
   oldValue = newValue;
@@ -93,9 +105,12 @@ Let's take a look at the <code>init</code> method for the class. The <code>init<
   }
 
   return self;
-}</pre>
-The object models are loaded by loading the file VersionInfo.plist, which is embedded in your applications bundle, and getting a dictionary of NSManagedObjectModel_VersionHashes. Dictionaries are not ordered so we need to sort the dictionary and then finally we create <code>NSManagedObjectModel</code> objects and put them in an array in their sorted order.
-<pre lang="objC">-(BOOL)loadObjectModels:(NSString*)modelName {
+}
+{% endhighlight %}
+The object models are loaded by loading the file VersionInfo.plist, which is embedded in your applications bundle, and getting a dictionary of NSManagedObjectModel\_VersionHashes. Dictionaries are not ordered so we need to sort the dictionary and then finally we create **NSManagedObjectModel** objects and put them in an array in their sorted order.
+
+{% highlight objc %}
+-(BOOL)loadObjectModels:(NSString*)modelName {
 
   NSString* momdPath = [[NSBundle mainBundle] pathForResource:modelName ofType:@"momd"];
   NSBundle* modelBundle = [NSBundle bundleWithPath:momdPath];
@@ -112,7 +127,8 @@ The object models are loaded by loading the file VersionInfo.plist, which is emb
     return NO;
   }
 
-  NSDictionary* versionDict = [versionInfo valueForKey:@"NSManagedObjectModel_VersionHashes"];
+  NSDictionary* versionDict 
+    = [versionInfo valueForKey:@"NSManagedObjectModel_VersionHashes"];
 
   objectModels = [[NSMutableArray alloc] initWithCapacity:[versionDict count]];
   NSArray* sortedMomList = [[versionDict allKeys] sortedArrayUsingFunction:nameSort context:NULL];
@@ -126,9 +142,11 @@ The object models are loaded by loading the file VersionInfo.plist, which is emb
   }
 
   return YES;
-}</pre>
+}
+{% endhighlight %}
 Determining the model version of the persistent store is as simple as iterating through the array of ordered object models until we find the correct one.
-<pre lang="ObjC">-(BOOL)determineModelVersion {
+{% highlight objc %}
+-(BOOL)determineModelVersion {
   NSError* error;
   NSDictionary *storeMetadata = [NSPersistentStoreCoordinator
                                  metadataForPersistentStoreWithURL:storeURL
@@ -145,9 +163,11 @@ Determining the model version of the persistent store is as simple as iterating 
   }
 
   return NO;
-}</pre>
+}
+{% endhighlight %}
 Finally, here is the core of the migration class that incrementally converts the persistent store to the latest version.
-<pre lang="objC">- (BOOL)migrationNeeded {
+{% highlight objc %}
+- (BOOL)migrationNeeded {
   return ! ( currentStoreModel == [objectModels count] );
 }
 
@@ -191,5 +211,6 @@ Finally, here is the core of the migration class that incrementally converts the
   }
 
   return YES;
-}</pre>
+}
+{% endhighlight %}
 Happy Koding!
