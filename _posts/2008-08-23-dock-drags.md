@@ -14,7 +14,7 @@ To add dock icon drag support you need to register for the **open contents** eve
 
 ### Registering for the open contents event
 
-Register for the open contents event with a little kode and some entries in your info.plist file.  What you put in the info.plist file determines what type of data your application accepts.  Below is a plist entry that accepts string and URL data.
+Register for the open contents event with a little code and some entries in your info.plist file.  What you put in the info.plist file determines what type of data your application accepts.  Below is a plist entry that accepts string and URL data.
 
 {% highlight xml %}
 <key>NSServices</key>
@@ -31,7 +31,7 @@ Register for the open contents event with a little kode and some entries in your
 </array>
 {% endhighlight %}
 
-After the application launches, you register for the open contents event with the following kode.
+After the application launches, you register for the open contents event with the following code.
 
 {% highlight objc %}
 - (void) applicationDidFinishLaunching:
@@ -55,7 +55,7 @@ After the application launches, you register for the open contents event with th
 
 ### Registering for supported files
 
-If you want to support file drags you have to add some more kode and some more groovy xml to the plist file.  In our sample application we will add some xml that states that we support all files and simply log the file names in the code.
+If you want to support file drags you have to add some more code and some more groovy xml to the plist file.  In our sample application we will add some xml that states that we support all files and simply log the file names in the code.
 
 {% highlight xml %}
 <key>CFBundleDocumentTypes</key>
@@ -77,7 +77,7 @@ If you want to support file drags you have to add some more kode and some more g
 </array>
 {% endhighlight %}
 
-
+and in a controller class ...
 
 {% highlight objc %}
 - (id) init {
@@ -99,6 +99,6 @@ If you want to support file drags you have to add some more kode and some more g
 
 This supports dragging files onto the application icon when it is not running and outside of the dock. Responding to an action, such as dragging some data to the application when the application is not running but in the dock, is left as an exercise for the reader.
 
-If you’re too lazy to set this up (and laziness is a common trait for excellent koders) <a href='/notcocoa/dwnlds/dockdrop.zip'>download this self-contained xCode project</a>.
+If you’re too lazy to set this up (and laziness is a common trait for excellent coders) <a href='/notcocoa/dwnlds/dockdrop.zip'>download this self-contained xCode project</a>.
 
 Happy Koding,
