@@ -2,6 +2,7 @@ name: Not Cocoa Mondo
 markdown: redcarpet
 destination: ../notcocoa
 pygments: true
+permalink: /:year/:title.html
 
 
 # For the RSS generator
