@@ -1,25 +1,22 @@
 --- 
 layout: post
 title: An Introduction to Handling Dock Icon Drags
-categories: 
-- Mondo Kode
-tags: []
-
+date:   2008-11-14 12:00:00
 status: publish
 type: post
 published: true
-meta: 
-  _edit_last: "1"
+
 ---
+
 One of the slickest touches you can add to your application is handling dock drags.
 
-To add dock icon drag support you need to register for the <strong>open contents</strong> event and register the file types your application supports (if it supports files).
+To add dock icon drag support you need to register for the **open contents** event and register the file types your application supports (if it supports files).
 
-<h3>Registering for the open contents event</h3>
+### Registering for the open contents event
 
 Register for the open contents event with a little kode and some entries in your info.plist file.  What you put in the info.plist file determines what type of data your application accepts.  Below is a plist entry that accepts string and URL data.
 
-<pre lang="xml">
+{% highlight xml %}
 <key>NSServices</key>
 <array>
   <dict>
@@ -32,11 +29,11 @@ Register for the open contents event with a little kode and some entries in your
     </array>
   </dict>
 </array>
-</pre>
+{% endhighlight %}
 
 After the application launches, you register for the open contents event with the following kode.
 
-<pre lang="objc" >
+{% highlight objc %}
 - (void) applicationDidFinishLaunching:
   (NSNotification *) notification {
 
@@ -54,14 +51,13 @@ After the application launches, you register for the open contents event with th
 
   return;
 }
+{% endhighlight %}
 
-</pre>
-
-<h3>Registering for supported files</h3>
+### Registering for supported files
 
 If you want to support file drags you have to add some more kode and some more groovy xml to the plist file.  In our sample application we will add some xml that states that we support all files and simply log the file names in the code.
 
-<pre lang="xml">
+{% highlight xml %}
 <key>CFBundleDocumentTypes</key>
 <array>
   <dict>
@@ -79,9 +75,9 @@ If you want to support file drags you have to add some more kode and some more g
     <string>Editor</string>
   </dict>
 </array>
-</pre>
+{% endhighlight %}
 
-<pre lang="objc">
+{% highlight objc %}
 - (id) init {
   if ((self = [super init])) {
     [NSApp setDelegate: self];
@@ -97,7 +93,7 @@ If you want to support file drags you have to add some more kode and some more g
     NSLog(@"TODO, do somemthing with %@", filename);
   }
 }
-</pre>
+{% endhighlight %}
 
 This supports dragging files onto the application icon when it is not running and outside of the dock. Responding to an action, such as dragging some data to the application when the application is not running but in the dock, is left as an exercise for the reader.
 
