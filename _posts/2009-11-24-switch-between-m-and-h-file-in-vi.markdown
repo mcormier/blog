@@ -1,19 +1,11 @@
 --- 
 layout: oneColumnPost
 title: Switch between .m and .h file in VI
-categories: 
-- Mondo Kode
-tags: []
 
-status: publish
-type: post
-published: true
-meta: 
-  _edit_last: "1"
 ---
 If you are working on Objective-C kode in VI the following functions and key mapping will allow you to quickly switch between the header and implementation file.
 
-<pre lang="vim" >
+{% highlight vim %}
 " Switch editing between
 " *.c and *.h files  (C)
 " or
@@ -51,9 +43,7 @@ function! LoadFile(filename)
 endfun
 
 map <f4> :call Flip_Extension()<cr>
-</pre>
-
-Kode on!
+{% endhighlight %}
 
 Reference:
 <a href="http://vim.wikia.com/wiki/Easily_switch_between_source_and_header_file">Easily switch between source and header file</a>
