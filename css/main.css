@@ -55,26 +55,26 @@ ul.posts span {
 
 
 article > div {
- min-width:60ex;
- max-width:60ex;
+ min-width:80ex;
+ max-width:80ex;
  margin-left:auto;
  margin-right:auto;
 }
 
 article {
-        -moz-column-width: 60ex;
+        -moz-column-width: 80ex;
         -moz-column-gap: 4em;
         -moz-column-rule-width: 1px;
         -moz-column-rule-color: #CCC;
         -moz-column-rule-style: dashed;
 
-        -webkit-column-width: 60ex;
+        -webkit-column-width: 80ex;
         -webkit-column-gap: 4em;
         -webkit-column-rule-width: 1px;
         -webkit-column-rule-color: #CCC;
         -webkit-column-rule-style: dashed;
 
-        column-width: 60ex;
+        column-width: 80ex;
         column-gap: 4em;
         column-rule-width: 1px;
         column-rule-color: #CCC;
