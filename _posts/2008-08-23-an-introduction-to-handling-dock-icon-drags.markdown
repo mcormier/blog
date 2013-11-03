@@ -8,7 +8,7 @@ published: true
 
 ---
 
-One of the slickest touches you can add to your application is handling dock drags.
+One of the slickest touches you can add to a Mac application is handling dock drags.
 
 To add dock icon drag support you need to register for the **open contents** event and register the file types your application supports (if it supports files).
 
