@@ -175,6 +175,12 @@ div.title {
 /*
 /*****************************************************************************/
 
+div.oneColumnPost {
+  width: 700px;
+  margin-left: auto;
+  margin-right: auto;
+}
+
 div.post {
   margin-left:38px;
   margin-right:38px;
