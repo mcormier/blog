@@ -1,4 +1,4 @@
-name: Not Cocoa Mondo
+name: Not Cocoa 
 markdown: redcarpet
 destination: ../notcocoa
 pygments: true

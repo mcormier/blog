@@ -1,17 +1,6 @@
 --- 
 layout: post
 title: SunFlower
-categories: []
-
-tags: []
-
-status: trash
-type: post
-published: false
-meta: 
-  _edit_last: "1"
-  _wp_trash_meta_status: publish
-  _wp_trash_meta_time: "1381771387"
 ---
 I recently released <a href="http://sunflower.preenandprune.com/">SunFlower</a> 0.13 for free. As some people have paid for previous versions I felt it was tactful to explain the change. The process I had developed for doing releases became time consuming and a nuisance. This caused releases to be infrequent and have many changes but eventually led me to procrastinate doing any work on SunFlower at all. It has been almost two years since 0.12 was released.	I'm hoping that with some changes I'll be more likely to do releases in the future. To spur SunFlower back to life I have decided to release 0.13 even though I feel it is a rough around the edges.
 
