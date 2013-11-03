@@ -205,6 +205,10 @@ div.postContent p img {
 }
 
 .post code {
+  font: 0.7em Monaco, Courier, Arial, sans-serif;
+  width:600px;
+  overflow-x: scroll;
+  display: block;
   border: 1px solid #ddd;
   background-color: #eef;
   padding: 0 .2em;
