@@ -99,6 +99,6 @@ and in a controller class ...
 
 This supports dragging files onto the application icon when it is not running and outside of the dock. Responding to an action, such as dragging some data to the application when the application is not running but in the dock, is left as an exercise for the reader.
 
-If you’re too lazy to set this up (and laziness is a common trait for excellent coders) <a href='/notcocoa/dwnlds/dockdrop.zip'>download this self-contained xCode project</a>.
+If you’re too lazy to set this up (and laziness is a common trait for excellent coders) <a href='/dwnlds/dockdrop.zip'>download this self-contained xCode project</a>.
 
 Happy Koding,

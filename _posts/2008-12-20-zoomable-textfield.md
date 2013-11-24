@@ -8,13 +8,13 @@ One of the the UI quirks I noticed when developing on the Mac platform is that w
 
 What does Apple do?  Let's take a look at how you edit an external link in iWeb.
  
-<img  title="iweb inspector panel" src="/notcocoa/images/iweb.png" />
+<img  title="iweb inspector panel" src="/images/iweb.png" />
 
 In the case of iWeb, you must scroll through the text field with the left and right arrow keys, which can be quite cumbersome.
 
 This is not the only implementation I've found.  [Brent Simmons][Inessential] the original author of [NetNewsWire][NetNewsWire] (versions 1-3) chose a different approach.  He tackled this issue by using an NSTextView instead of an NSTextField.
  
-<img title="NetNewsWire inspector panel" src="/notcocoa/images/netnewswire.png"  />
+<img title="NetNewsWire inspector panel" src="/images/netnewswire.png"  />
 
 I prefer Brent's solution to Apple's, yet was not satisified with either solution. I wanted something clean and compact like Apple's solution but something that would allow the user to see the entire URL like Brent's solution.
  
@@ -22,13 +22,13 @@ I prefer Brent's solution to Apple's, yet was not satisified with either solutio
 
 The solution I came up with is to take the concept of [Quick Look][QuickLook] and squish it into a text field; a zoomable text field.  
  
-<img src="/notcocoa/images/merged.jpg"  />
+<img src="/images/merged.jpg"  />
 
 ## Implementation ##
 
 To create this component we extend two UI classes (NSTextFieldCell, and NSTextField).  The custom text field cell constrains the width of the cell so that text never appears where the button may appear.  The custom text field manages the button visibility and sends messages to the controller if the button is pushed. There is also an animation class that manages the size of the window during a zoom in or zoom out.
 
-<img src="/notcocoa/images/classes.png"  />
+<img src="/images/classes.png"  />
 
 ## Scaling ##
 To achieve a look similar to Quick Look it is necessary to scale the window when the HUD window zooms in and out.  This means more than just making the frame of the window a different size. It requires scaling the window so that the window, and it's contained elements (title bar, text fields, ...) are all scaled.
@@ -39,7 +39,7 @@ It is important to note that the button appears just before the text field is co
 
 Another issue I considered was how would users react with a button inside of a text field?  The short answer is, *Apple does it so it must be okay*. Seriously though, it appears to be a fairly standard practice to put buttons in text fields these days.  In the Safari address field there are sometimes even multiple buttons.  Below is an example of Safari with a "Snapback" button and a "RSS" feed button.
 
-<img src="/notcocoa/images/safaributtons.jpg"  />
+<img src="/images/safaributtons.jpg"  />
 
 ## Conclusion ##
  

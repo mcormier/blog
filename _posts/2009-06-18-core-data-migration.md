@@ -10,7 +10,7 @@ To use Core Data versioning support you need to be using Mac OS X v10.5 and your
 **Update:** If Mac OS X v10.6 is your baseline target operating system you should try <a href="http://developer.apple.com/mac/library/documentation/Cocoa/Conceptual/CoreDataVersioning/Articles/vmLightweight.html">lightweight migration</a> instead of following this article. Use the new <a href="http://developer.apple.com/mac/library/documentation/Cocoa/Reference/CoreDataFramework/Classes/NSPersistentStoreCoordinator_Class/NSPersistentStoreCoordinator.html#//apple_ref/doc/c_ref/NSInferMappingModelAutomaticallyOption">NSInferMappingModelAutomaticallyOption</a> migration option.
 
 <img style="border: 2px solid black;" title="modeld" 
-     src="/notcocoa/images/modeld.png" alt="modeld" />
+     src="/images/modeld.png" alt="modeld" />
 
 Once you've created more than one version of your model you should support migrating old versions of the model to the new version. You can do this by passing the **NSMigratePersistentStoresAutomaticallyOption** option to **NSPersistentStoreCoordinator** when adding the persistent store and by creating a mapping model.
 
@@ -35,14 +35,14 @@ if( store == nil ) {
 
 Core Data will now magically convert the data from version 1 to version 2, if necessary when the program loads. You and your users will be happy. Everything is hunky-dory.
 
-<img src="/notcocoa/images/mappingModel1.jpg" />
+<img src="/images/mappingModel1.jpg" />
 
 ## Where's the Beef? ##
 So far I've simply summarized Apple's documentation. What kind of blog is this anyway?
 
 Well, automatic migration isn't completely automatic. Let's add a third version of the data model with another model mapping and see what happens.
 
-<img src="/notcocoa/images/mappingmodel2.jpg" />
+<img src="/images/mappingmodel2.jpg" />
 
 Okay, we've added a data model and a mapping model to that data model from the previous. We've set version three as the current version of the data model and now have two test cases to try.
 
@@ -51,14 +51,14 @@ Okay, we've added a data model and a mapping model to that data model from the p
 
 Testing shows that case 1 fails and case 2 passes. Case 1 fails because the automatic migration logic provided by Apple is very simple. It looks for a mapping model from the ol to the new version. If it can't find one then it stops.
 
-<img src="/notcocoa/images/mappingmodel3.jpg"/>
+<img src="/images/mappingmodel3.jpg"/>
 
 To solve this problem you can modify the mapping from version 1 to 2 to go from version 1 to 3. The problem with this solution is that as you get more versions of your data model you will have to modify more mapping models. To be specific, if you have N data models you will need to configure N - 1 mapping models.
 
 ## Custom Migration ##
 When N is large then so is N - 1, so modifying all those mapping models when we added one data model probably isn't the greatest solution; especially if we only added one attribute. We need custom migration code.
 
-<img src="/notcocoa/images/mappingmodel4.jpg"  />
+<img src="/images/mappingmodel4.jpg"  />
 
 First we need to modify the appDelegate class in the standard Core Data generated project to use a migration class. We'll create a migration object and tell it to do the migration if it needs to be done.
 
