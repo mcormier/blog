@@ -1,10 +1,10 @@
 name: Not Cocoa 
 markdown: redcarpet
-destination: ../notcocoa
+destination: /home/mcormier/sites/weblog
 pygments: true
 permalink: /:year/:title.html
 
 
 # For the RSS generator
-url: http://blog.preenandprune.com
+url: http://webblog.preenandprune.com
 author: Matthieu Cormier
