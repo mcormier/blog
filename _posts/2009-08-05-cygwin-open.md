@@ -1,25 +1,14 @@
 --- 
 layout: oneColumnPost
 title: Simulating the open command in cygwin
-categories: 
-- Mondo Kode
-tags: []
 
-status: publish
-type: post
-published: true
-meta: 
-  _edit_last: "1"
 ---
-You may or may not be familiar with the <a href="http://ss64.com/osx/open.html">open command</a> in the terminal application.  With the open command you can type
-<strong>"open ."</strong>
-at the command line and a Finder window will appear.  You can also type
-<strong>"open &lt;filename&gt;"</strong>
- and the file will be opened with it's associated application, as if you double clicked on it from the finder.
 
-Now suppose you're a Mac aficionado using Windows.  You've installed <a href="http://www.cygwin.com/">Cygwin</a> to gain access to the power of Unix but you miss the open command.  The following script can help you out.
+You may or may not be familiar with the [open command][openCommand] in the terminal application.  With the open command you can type **"open ."** at the command line and a Finder window will appear.  You can also type **"open &lt;filename&gt;"** and the file will be opened with it's associated application, as if you double clicked on it from the finder.
 
-<pre lang="bash">
+Now suppose you're a Mac aficionado using Windows.  You've installed [Cygwin][cygwin] to gain access to the power of Unix but you miss the open command.  The following script can help you out.
+
+{% highlight bash %}
 #!/usr/bin/bash
 
 if [ -z "$1" ] ; then
@@ -30,6 +19,12 @@ fi
 PARAM=`cygpath --dos --absolute "$1"`
 
 /cygdrive/c/Windows/explorer.exe $PARAM &
-</pre>
+{% endhighlight%}
 
-<strong>UPDATE:</strong> Or you can alias the <strong>cygstart </strong>command in your .bashrc file as this <a href="http://stackoverflow.com/questions/577595/open-a-file-from-cygwin" >stackoverflow posting explains</a>.
+**UPDATE:** Or you can alias the **cygstart** command in your .bashrc file as this [stackoverflow posting explains][overflowPost].
+
+
+
+[openCommand]: http://ss64.com/osx/open.html
+[cygwin]: http://www.cygwin.com
+[overflowPost]: http://stackoverflow.com/questions/577595/open-a-file-from-cygwin
