@@ -1,15 +1,7 @@
 --- 
 layout: post
 title: Email in a post-PC world
-categories: 
-- Rant
-tags: []
 
-status: publish
-type: post
-published: true
-meta: 
-  _edit_last: "1"
 ---
 Like many people I have a Gmail account and have been using it for about 8 years now.  Gmail was introduced in April of 2004 <a href="#ref1"><sup>[1]</sup></a> as a free email service and it was big deal at the time.  Originally available by invitation only,Gmail  invites were briefly a commodity with people trying to sell them on message boards until Google allowed anyone to sign up.  When it first debuted, Gmail gave users 1 Gig of storage for free and has since increased storage to 10 Gig.  Google have even announced that they will continue to increase storage.  Basically, your email is data, and Google like's to mine data.
 <h2>Google Adds IMAP Support</h2>
@@ -21,9 +13,8 @@ Even with the large storage space available in Gmail I like to have a copy of my
 
 
 
-<center><img class="size-full wp-image-1186" title="pcWorld" src="http://www.preenandprune.com/cocoamondo/wp-content/uploads/2012/10/pcWorld.gif" alt="" width="155" height="347" />
-2007
-</center>
+<img src="/images/pcWorld.gif" alt="" width="155" height="347" />
+<center>2007</center>
 
 
 
@@ -31,9 +22,8 @@ This worked for many years but has become less convenient in today's post-PC era
 
 So my current setup looks something like this:
 
-<center><img class="size-full wp-image-1196" title="postPcWorld" src="http://www.preenandprune.com/cocoamondo/wp-content/uploads/2012/10/postPcWorld.gif" alt="" width="641" height="480" />
-2012
-</center>
+<img src="/images//postPcWorld.gif" />
+<center>2012</center>
 
 Things have gotten a little more complicated.  In 2007 I had one main device that I used for viewing my mail and archiving it and used the web interface occasionally   In 2012 I have three auxiliary devices for viewing my mail and one application that is used for archiving and rarely viewing mail.  Obviously, I wouldn't trade the mobility and convenience of checking my mail from anywhere  for the simpler configuration in 2007. I still want to have a local archive and I don't want it to be a chore any longer.  It is tempting to simply stop storing things locally and store everything on Google's servers. I'm not anti-cloud, however, I am cautious about depending 100% on a free service that I could potentially lose access to at any time.  Storage is cheap and I have a neglected desktop that is happy to have it's bits put to use.  It would be foolish not to use that desktop to have an extra backup of my mail, especially if I can automate the process.
 <h2>IMAP flags</h2>
@@ -56,17 +46,25 @@ Flags work fine if you close down an IMAP client when you are not using it when 
 I've been using IMAP for many years now and it seemed worthwhile to understand how it works to some extent.  What follows is an explanation on how to connect to Gmail from the command line, without an email client, executing IMAP commands manually. Basically a quick tutorial on how to travel further down the IMAP rabbit hole.
 
 You won't get message flag data by selecting "view raw message" in your email client. Flags are meta-data on the messages so to see the actual flag data you need to log into the IMAP server. If you've ever used telnet to test an HTTP server you'll be interested to know that you can do the same with IMAP.  You can't connect to Gmail with an insecure connection so you'll have to use OpenSSL instead.
-<pre lang="bash">openssl s_client -crlf -connect imap.gmail.com:993</pre>
+{% highlight bash %}
+openssl s_client -crlf -connect imap.gmail.com:993
+{% endhighlight %}
 To make the output easier to read the client request lines, what you type at the command line, have been prefixed with "C: " and the server responses have been prefixed with "S: ".  This is how all the IMAP RFC documents are written so it seems an appropriate format.  Once you've connected to the Gmail IMAP server with OpenSSL a bunch of certificate information<a href="#ref5"><sup>[5]</sup></a>  will be spewed out at you which I won't bother reproducing here. Eventually you will see the following line which means the server is ready for you to give it commands.
-<pre lang="bash">S: * OK Gimap ready for requests ...</pre>
+{% highlight bash %}
+S: * OK Gimap ready for requests ...
+{% endhighlight %}
 The IMAP protocol is interesting because a robust client is expected to prefix all commands with a unique tag. This is so the server can send new information to the client at any time.  The actual command is the second argument. So when you execute a command with the tag "tag1" the final response from the server will start with "tag1".
 
 Below is the output from a successful login. The first line is the login command executed manually through OpenSSL and the following two lines are the response from the server which lists the features this IMAP server supports. The capabilities that are prefixed with X (i.e. XLIST or X-GM-EXT-1) are custom IMAP features implemented by Google.  If Google implemented the NOTIFY command it would be listed here.
-<pre lang="bash">C: tag1 login user@gmail.com password
+{% highlight bash %}
+C: tag1 login user@gmail.com password
 S: * CAPABILITY IMAP4rev1 UNSELECT IDLE NAMESPACE QUOTA ID XLIST CHILDREN X-GM-EXT-1 UIDPLUS COMPRESS=DEFLATE
-S: tag1 OK user@gmail.com Matthieu Cormier authenticated (Success)</pre>
+S: tag1 OK user@gmail.com Matthieu Cormier authenticated (Success)
+{% endhighlight %}
 Once you've logged in successfully you need to select the inbox in order to be able to examine message data.  To see what flags are  currently set on a message you need to use the FETCH command.
-<pre lang="bash">C: tag2 SELECT INBOX
+
+{% highlight bash %}
+C: tag2 SELECT INBOX
 S: * FLAGS (\Answered \Flagged \Draft \Deleted \Seen $MailFlagBit0 $MailFlagBit1 $MailFlagBit2 NotJunk $Junk $Forwarded JunkRecorded $NotJunk)
 S: * OK [PERMANENTFLAGS (\Answered \Flagged \Draft \Deleted \Seen $MailFlagBit0 $MailFlagBit1 $MailFlagBit2 NotJunk $Junk myflag $Forwarded JunkRecorded $NotJunk \*)] Flags permitted.
 S: * OK [UIDVALIDITY 625864318] UIDs valid.
@@ -76,26 +74,35 @@ S: * OK [UIDNEXT 7259] Predicted next UID.
 S: tag2 OK [READ-WRITE] INBOX selected. (Success)
 C: tag3 FETCH 1 FLAGS
 S: * 1 FETCH (FLAGS (NotJunk $NotJunk \Seen))
-S: tag3 OK Success</pre>
+S: tag3 OK Success
+{% endhighlight %}
 The number in the FETCH command is the index of the message you want the command to work on.  In this example the server responded saying that three flags are set on message 1.  As you can see flags are used for identifying  if you've answered a message, read the message and even to determine that it is not junk mail.  Flags that start with a slash are flags that are defined in the IMAP specification.  The particular flag that we are interested in is "\Flagged".  If an email message has the flag "\Flagged" then an email client will display a flag, or star it (Gmail).
 
 You can add or remove a flag from a message with the STORE command.
-<pre lang="bash">C: tag4 STORE 1 +FLAGS (myCustomFlag)
+{% highlight bash %}
+C: tag4 STORE 1 +FLAGS (myCustomFlag)
 S: * 1 FETCH (FLAGS (\Seen myCustomFlag NotJunk $NotJunk))
 S: tag4 OK Success
 C: tag5 STORE 1 -FLAGS (myCustomFlag)
 S: * 1 FETCH (FLAGS (\Seen NotJunk $NotJunk))
-S: tag5 OK Success</pre>
+S: tag5 OK Success
+{% endhighlight %}
 Finally to logout simply use the LOGOUT command.
-<pre lang="bash">C: tag6 LOGOUT
+
+{% highlight bash %}
+C: tag6 LOGOUT
 S: * BYE LOGOUT Requested
-S: tag6 OK 73 good day (Success)</pre>
+S: tag6 OK 73 good day (Success)
+{% endhighlight %}
 Once you understand how to manually connect to the IMAP server and examine the flag meta-data it's monkey work to determine what a particular application does when setting a flag on a message.  iOS, Pine, and Gmail all use "\flagged", so they are all doing the same thing under the covers.
 
 Mail.app is also setting "\flagged" but it is also using three custom flags, $MailFlagBit0, $MailFlagBit1, and $MailFlagBit2 when you choose a color.  It takes three binary bits to count to eight, so a combination of these flags is used to represent all the colors.
 
 If you turn on extra star colors in Gmail, IMAP custom flags are not used to distinguish between the different color stars like in Mail.app. This makes sense because Gmail is not primarily an IMAP server, it is a mail server that is accessible by IMAP, POP3, and Exchange ActiveSync. Gmail defines advanced search terms so that you can search for messages based on a specific star color in the web interface<a href="#ref7"><sup>[7]</sup></a>.  If you are logged in to the web interface you can do a search for "has:red-star".      I attempted to do an IMAP search using Google's X-GM-RAW IMAP extension<a href="#ref6"><sup>[6]</sup></a>, however, searching for a message with a particular star does not appear to be supported.
-<pre lang="bash">tag SEARCH X-GM-RAW "has:red-star in:anywhere"</pre>
+
+{% highlight bash %}
+tag SEARCH X-GM-RAW "has:red-star in:anywhere"
+{% endhighlight %}
 <h2>The Final Solution</h2>
 After all this interesting investigation into the internals of IMAP and Gmail I described my problem to a colleague.  He suggested that I make the problem simpler, forget about writing a custom IMAP client that monitors flags and archives messages offline when they are flagged. Forget about using flags to signal what folder to archive a message to.  Simply write a rule on the desktop client that archives everything to one folder.  Add a rule to Mail.app to copy new messages to folder X.
 
