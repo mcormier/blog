@@ -19,17 +19,17 @@ People looking for a more professional tool should take a look to the libdmg lib
 <h3>Build the Tools</h3>
 Download the latest version of <a href="http://github.com/planetbeing/libdmg-hfsplus">libdmg-hfsplus</a> , the git enlightened can execute:
 
-<pre lang="objc">
+{% highlight sh %}
 git clone git://github.com/planetbeing/libdmg-hfsplus.git
-</pre>
+{% endhighlight %}
 
 libdmg-hfsplus uses <a href="http://www.cmake.org/">CMake</a> so make sure you have cmake installed.  You can either install the cygwin package or get the latest <a href="http://www.cmake.org/cmake/resources/software.html">Windows version</a>.  I recommend the cygwin version since that's what I used.
 
 Execute these commands in the root libdmg-hfsplus directory:
-<pre lang="objc">
+{% highlight sh %}
 cmake ./
 make
-</pre>
+{% endhighlight %}
 
 Now you've built the tools you need to cut through DMG files like butter.
 <ul><li>dmg.exe</li><li>hdutil.exe</li><li>hfsplus.exe</li>
@@ -43,35 +43,35 @@ To test this out you're gonna need a DMG file. You can download the DMG file I u
 
 Of the three executable files you built the only one you really need to use is <strong>hdutil</strong>.  Here is the command to list the contents of a DMG file.
 
-<pre lang="objc">
+{% highlight sh %}
 hdutil SunFlowerPublic-0.7.dmg ls
-</pre>
+{% endhighlight %}
 
 The ls command will also take a parameter which will let you explore the contents of the DMG file system.
 
-<pre lang="objc">
+{% highlight sh %}
 hdutil SunFlowerPublic-0.7.dmg ls /SunFlower.app/Contents
-</pre>
+{% endhighlight %}
 
 The extract command wants two arguments.  The first is the location of the file in the DMG file.  The second is where to put the file on your machine.
 
-<pre lang="objc">
+{% highlight sh %}
 hdutil SunFlowerPublic-0.7.dmg extract /DMG_backgroundPro.png local.png
-</pre>
+{% endhighlight %}
 
 Use the extractall command to pull out everything in one fell swoop.
 
-<pre lang="objc">
+{% highlight sh %}
 hdutil SunFlowerPublic-0.7.dmg extractall
-</pre>
+{% endhighlight %}
 
 Finally the easiest way to extract the DMG to a clean directory is to create a new directory and call the extractall command from that location.
 
-<pre lang="objc">
+{% highlight sh %}
 mkdir explodedDMG
 cd explodedDMG
 hdutil ../SunFlowerPublic-0.7.dmg extractall
-</pre>
+{% endhighlight %}
 
 The core code of libdmg-hfsplus appears to be system independent so this should work with Linux also.
 
