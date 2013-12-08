@@ -1,17 +1,7 @@
 --- 
 layout: post
 title: How to open a DMG file in Windows?
-categories: 
-- Windows Cocoa
-tags: []
 
-status: publish
-type: post
-published: true
-meta: 
-  _edit_last: "1"
-  _oembed_e7b8f826c07aaad1b305ef028d74d580: "{{unknown}}"
-  _oembed_286065d1bb5c9f44731d12bb22d15bef: "{{unknown}}"
 ---
 So for some reason or another you need to get something from a DMG file and there isn't a Mac in the vicinity.  It is possible, and you don't need to pay $50 for something like <a href="http://www.mediafour.com/products/macdrive/">MacDrive</a>.
 
@@ -19,10 +9,12 @@ For the super lazy and non-koder types you can use <a href="http://vu1tur.eu.org
 
 I didn't do this.  I downloaded the source to <a href="http://vu1tur.eu.org/tools/" >dmg2img</a> and read the README.  Yes, I actually read README files, why do you think they're named so?  This pointed me in the direction of <a href="http://github.com/planetbeing/libdmg-hfsplus">libdmg-hfsplus</a>.
 
-<blockquote>People looking for a more professional tool should take a look to the libdmg library and related utilities at
-  http://github.com/planetbeing/libdmg-hfsplus/tree/master
-  http://www.shanemcc.co.uk/libdmg/
-(the libdmg code is still reported to be experimental, though, and it is also much bigger than dmg2img.)</blockquote>
+People looking for a more professional tool should take a look to the libdmg library and related utilities:
+
+- http://github.com/planetbeing/libdmg-hfsplus/tree/master
+- http://www.shanemcc.co.uk/libdmg/
+
+(the libdmg code is still reported to be experimental, though, and it is also much bigger than dmg2img.)
 
 <h3>Build the Tools</h3>
 Download the latest version of <a href="http://github.com/planetbeing/libdmg-hfsplus">libdmg-hfsplus</a> , the git enlightened can execute:
