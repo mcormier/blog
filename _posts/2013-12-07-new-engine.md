@@ -18,7 +18,7 @@ So let's face it, I've been avoiding you WordPress.  It's not you it's me.  I've
 
 Maybe I won't write any new articles and will spend more time reformating old articles. Time will tell.
 
-P.S. Here are some vi settings for editing jekyll style markdown files
+**P.S.** Here are some vi settings for editing jekyll style markdown files
 
 {% highlight vim %}
 function! MarkDownSettings()
@@ -30,6 +30,21 @@ function! MarkDownSettings()
   syntax region code matchgroup=ignore start="% highlight" end="% endhighlight"
 endfunction
 {% endhighlight %}
+
+**P.P.S** Here is what you need to do in your Apache .htaccess file to redirect old Wordpress query string URLS to static HTML pages.
+
+{% highlight apache %}
+<IfModule mod_rewrite.c>
+
+RewriteEngine On
+RewriteBase /cocoamondo/
+
+RewriteCond %{QUERY_STRING}  ^p=1181$
+RewriteRule (.*)  http://weblog.preenandprune.com/2012/post-pc-email.html [R=301,L]
+
+</IfModule>
+{% endhighlight %}
+
 
 [linkrot]: http://en.wikipedia.org/wiki/Link_rot
 [jekyll]: http://jekyllrb.com
