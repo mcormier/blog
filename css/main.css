@@ -39,6 +39,7 @@ a:visited { color:#08C; }
 ul.posts {
   list-style-type: none;
   margin-bottom: 2em;
+  margin-left:40px;
 }
 
 ul.posts li {
@@ -102,7 +103,9 @@ article {
 }
 
 div.header {
+  font-size:2em;
   position: relative;
+  margin-bottom:40px;
 }
 
 div.title {
