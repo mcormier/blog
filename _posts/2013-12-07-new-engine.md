@@ -35,12 +35,13 @@ endfunction
 
 {% highlight apache %}
 <IfModule mod_rewrite.c>
-
 RewriteEngine On
-RewriteBase /cocoamondo/
 
+RewriteBase /cocoamondo/
 RewriteCond %{QUERY_STRING}  ^p=1181$
-RewriteRule (.*)  http://weblog.preenandprune.com/2012/post-pc-email.html [R=301,L]
+# The Question mark at the end of the RewriteRule URL is used to 
+# drop the query string after a redirect. 
+RewriteRule (.*)  http://weblog.preenandprune.com/2012/post-pc-email.html? [R=301,L]
 
 </IfModule>
 {% endhighlight %}
