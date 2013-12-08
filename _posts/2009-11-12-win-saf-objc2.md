@@ -1,15 +1,7 @@
 --- 
 layout: post
 title: Is Windows Safari using Objective-C 2.0?
-categories: 
-- Mondo Kode
-tags: []
 
-status: publish
-type: post
-published: true
-meta: 
-  _edit_last: "1"
 ---
 If you look at the Safari installation directory on Windows you probably noticed the <strong>objc.dll</strong> file.  Are you curious if Windows Safari is using Objective-C version 1.0 or 2.0?  I was, and this is my little adventure on trying to find that out.  The short answer is<strong> NO</strong>.  Safari on Windows still uses Objective-C 1.0.  In this article I'm going to build the  Objective-C DLL and show you why I don't think Safari for Windows is using version 2.0.
 
@@ -47,8 +39,7 @@ Did you really think it was going to be that easy?
 <h3>Error #1 TargetConditionals.h</h3>
 
 If you have XCode installed on a Mac you can easily find TargetConditionals.h.  However, that file doesn't support the Microsoft compiler. This is evident by the comment at the top of the file.  It's good to read the source no?
-
-<pre lang="c" >
+{% highlight c %}
 /*
      File:       TargetConditionals.h
 
@@ -62,19 +53,19 @@ If you have XCode installed on a Mac you can easily find TargetConditionals.h.  
 
 #ifndef __TARGETCONDITIONALS__
 #define __TARGETCONDITIONALS__
-</pre>
+{% endhighlight  %}
 
-So with a little Googly magic you'll find the TargetConditionals.h that you're looking for <a href="http://developer.apple.com/carbon/download/">here</a> under Universal Interfaces 3.4.2.  Of course, a *.img.bin file isn't much help on a Windows operating system so you're going to have to extract the files on a Mac and then copy them to the Windows Machine.
+So with a little Googly magic you'll find the TargetConditionals.h that you're looking for <a href="http://developer.apple.com/carbon/download/">here</a> under Universal Interfaces 3.4.2.  Of course, a \*.img.bin file isn't much help on a Windows operating system so you're going to have to extract the files on a Mac and then copy them to the Windows Machine.
 
 Oh, and the files are going to have those classic Mac line breaks instead of Unix line breaks so you're going to have to convert them.
 
-<pre lang="bash">
+{% highlight sh %}
 for file in `ls *.h`
 do
   tr '\r' '\n' < $file  > tempfile.txt
   mv tempfile.txt $file
 done
-</pre>
+{% endhighlight  %}
 
 Put those UniversalHeaders files you worked so hard to get somewhere logical, and include the header files in your project search path.  What's that? You can't figure out where to do that?  Confusing Microsoft UI got you down?
 
@@ -87,7 +78,7 @@ If you do another build then you'll notice there are no complaints about TargetC
 
 <h3>Error #2 AvailabilityMacros.h</h3>
 
-To get rid of the AvailabilityMacros.h error grab all the header files in the latest SDK you installed on your Mac.  We are trying to compile the version of Objective-C that is compiled on Snow Leopard so you should probably get the 10.6 *.h files.
+To get rid of the AvailabilityMacros.h error grab all the header files in the latest SDK you installed on your Mac.  We are trying to compile the version of Objective-C that is compiled on Snow Leopard so you should probably get the 10.6 \*.h files.
 
 Create another directory for some extra includes.  I called mine
 <strong>/cygdrive/c/Dev/usr/include/VisualStudio</strong>, but you can call it what you like.  Now copy these three files to that new directory, and add the directory to the list of include directories in Visual Studio.
@@ -111,14 +102,14 @@ Next you will see a link error about  some functions in the file objc-runtime-ol
 
 Basically you need to comment out three functions so that it will compile.  The explanation on the mailing list is that the source is out of sync which means nobody at Apple has probably tried to build objc on Windows for a while.
 <ul>
-<li>unmap_image</li>
-<li>map_images</li>
-<li>load_images</li>
+<li>unmap\_image</li>
+<li>map\_images</li>
+<li>load\_images</li>
 </ul>
 
 Add <strong>#if !TARGET_OS_WIN32 ... #endif </strong> around those three functions.
 
-<pre lang="c" >
+{% highlight c %}
 #if !TARGET_OS_WIN32
 /***********************************************************************
 * unmap_image
@@ -182,7 +173,7 @@ load_images(enum dyld_image_states state, uint32_t infoCount,
     return NULL;
 }
 #endif
-</pre>
+{% endhighlight  %}
 
 <h3>Error #5 SRCROOT & DSTROOT</h3>
 
@@ -192,11 +183,11 @@ We've almost got this DLL built, we just need to do one last thing. Several plac
 
 Created a batch file to define those variables right before opening up the Visual Studio Project file.
 
-<pre lang="dos">
+{% highlight dosbatch %}
 set DSTROOT=c:\Dev\builds\ObjC\
 set SRCROOT=c:\Dev\sourceRoot\ObjC\
 C:\cygwin\bin\cygstart.exe objc.vcproj
-</pre>
+{% endhighlight  %}
 
 Now you should be able to successfully build the objc.dll library. It can be found under <strong>$DSTROOT\AppleInternal\bin\objc.dll</strong>.
 
@@ -208,7 +199,7 @@ Add <strong>/D "__OBJC2__"</strong> to the C/C++ command line arguments in the p
 
 If you're building on 32-bit windows like myself you'll get an error about an unknown preprocessor command in <strong>objc-runtime-new.m</strong>.  Apparently the Microsoft C++ compiler does not recognize the <strong>#warning</strong> directive, must be a cultural thing.
 
-<pre lang="c" line="430">
+{% highlight c linenos linenostart=430 %}
 #if defined(__x86_64__)
     uint16_t *p = (uint16_t *)(dst + vtable_prototype_index_offset + 3);
     if (*p != 0x7fff) _objc_fatal("vtable_prototype busted");
@@ -216,20 +207,18 @@ If you're building on 32-bit windows like myself you'll get an error about an un
 #else
 #   warning unknown architecture
 #endif
-</pre>
+{% endhighlight %}
 
 I didn't try too hard to build Objective-C 2.0 because I bumped into the following nugget when perusing <strong>objc-confg.h</strong>.
 
-<pre lang="c" line="28">
+{% highlight c linenos linenostart=28 %}
 #if TARGET_OS_EMBEDDED  ||  TARGET_OS_WIN32
 #   define NO_GC 1
 #endif
-</pre>
+{% endhighlight %}
 
-<h3>Conclusion</h3>
-     If Objective-C 2.0 can be built on 32-bit Windows I don't know how to do it.  Garbage collection is one of the staple features of Objective-C 2.0 (properties and fast enumeration are just syntactic sugar) and if it's not supported, is there really any point of building it?  Therefore we can firmly conclude that Safari for Windows is not using Objective-C 2.0, at least the 32-bit version anyway.
-
-Keep on Koding on!
+### Conclusion
+If Objective-C 2.0 can be built on 32-bit Windows I don't know how to do it.  Garbage collection is one of the staple features of Objective-C 2.0 (properties and fast enumeration are just syntactic sugar) and if it's not supported, is there really any point of building it?  Therefore we can firmly conclude that Safari for Windows is not using Objective-C 2.0, at least the 32-bit version anyway.
 
 <strong>References</strong>
 <a href="http://www.theocacao.com/document.page/510">A Quick Objective-C 2.0 Tutorial</a>
