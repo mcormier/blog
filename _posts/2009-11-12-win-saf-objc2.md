@@ -5,7 +5,7 @@ title: Is Windows Safari using Objective-C 2.0?
 ---
 If you look at the Safari installation directory on Windows you probably noticed the <strong>objc.dll</strong> file.  Are you curious if Windows Safari is using Objective-C version 1.0 or 2.0?  I was, and this is my little adventure on trying to find that out.  The short answer is<strong> NO</strong>.  Safari on Windows still uses Objective-C 1.0.  In this article I'm going to build the  Objective-C DLL and show you why I don't think Safari for Windows is using version 2.0.
 
-<center><img src="http://www.preenandprune.com/cocoamondo/wp-content/uploads/2009/11/files.gif" alt="files" title="files" width="141" height="224" class="size-full wp-image-672" border=1/></center>
+<img src="/images/files.gif"  border=1/>
 
 <h3>The Objective-C Runtime Environment</h3>
 
@@ -72,7 +72,7 @@ Put those UniversalHeaders files you worked so hard to get somewhere logical, an
 <center><strong>Tools --> Options --> VC++ Directories</strong></center>
 
 Then set the "Show directories for" combo box to "Include files".
-<center><img src="http://www.preenandprune.com/cocoamondo/wp-content/uploads/2009/11/includeFiles.png" alt="includeFiles" title="includeFiles" border=2 width="409" height="155" class="aligncenter size-full wp-image-684" /></center>
+<img src="/images/includeFiles.png"  />
 
 If you do another build then you'll notice there are no complaints about TargetConditionals.h but Visual Studio still can't find AvailabilityMacros.h.
 
@@ -179,7 +179,7 @@ load_images(enum dyld_image_states state, uint32_t infoCount,
 
 We've almost got this DLL built, we just need to do one last thing. Several places in the project properties the variables $(SRCROOT) and $(DSTROOT) are referenced.
 
-<center><img src="http://www.preenandprune.com/cocoamondo/wp-content/uploads/2009/11/srcRoot.png" alt="srcRoot" title="srcRoot" width="413" height="157" class="aligncenter size-full wp-image-691" /></center>
+<img src="/images/srcRoot.png"  />
 
 Created a batch file to define those variables right before opening up the Visual Studio Project file.
 
