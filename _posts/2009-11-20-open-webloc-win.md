@@ -1,16 +1,7 @@
 --- 
 layout: post
 title: Opening a .webloc file in Windows
-categories: 
-- Mondo Kode
-- Windows Cocoa
-tags: []
 
-status: publish
-type: post
-published: true
-meta: 
-  _edit_last: "1"
 ---
 <h3>An Exploration of Cocoa on Windows</h3>
 <h4>The problem</h4><br>
@@ -35,7 +26,7 @@ In a <a href="http://www.preenandprune.com/cocoamondo/?p=635">previous posting</
 
 The frameworks and libraries are particularly important.  Learning new frameworks takes time, and being able to leverage a familiar framework can save time.  Frameworks can also be designed poorly making them hard to use.  Lots of methods with too many parameters for example.
 
-<pre lang="Cplusplus">
+{% highlight c %}
 BOOL WINAPI CreateProcess(
   __in_opt     LPCTSTR lpApplicationName,
   __inout_opt  LPTSTR lpCommandLine,
@@ -48,7 +39,7 @@ BOOL WINAPI CreateProcess(
   __in         LPSTARTUPINFO lpStartupInfo,
   __out        LPPROCESS_INFORMATION lpProcessInformation
 );
-</pre>
+{% endhighlight %}
 <ul>
 <li><a href="http://msdn.microsoft.com/en-us/library/ms682425(VS.85).aspx">CreateProcess Reference</a></li>
 <li><a href="http://queue.acm.org/detail.cfm?id=1255422">API Design Matters</a></li>
@@ -115,7 +106,7 @@ To get @"" string constants to work you need to do the following:
 <li>Define <a href="http://github.com/mcormier/lilac/blob/master/src/cocoaLite/NSString/NSString.m#L7">NSString as an abstract class that dishes out a different concrete class in the alloc method. No variables can be defined in </a>NSString. This is because NSConstantString will be extending NSString and the compiler requires a specific variable structure for constant-string-class.</li>
 </ol>
 
-<pre lang="objc">
+{% highlight objc %}
 @implementation NSString
 
 // NSString is a stub class that creates another class
@@ -126,22 +117,19 @@ To get @"" string constants to work you need to do the following:
 + (id)alloc {
   return (id)class_create_instance([NSStringCF class]);
 }
-</pre>
+{% endhighlight %}
 
-<ol>
-<li>Create an <a href="http://github.com/mcormier/lilac/blob/master/src/cocoaLite/NSString/NSString.h#L53">NSConstantString</a> class that extends NSString</li>
-</ol>
+Create an <a href="http://github.com/mcormier/lilac/blob/master/src/cocoaLite/NSString/NSString.h#L53">NSConstantString</a> class that extends NSString
 
-<pre lang="objc">
+{% highlight objc %}
 @interface NSConstantString: NSString {
   char *c_string;
   unsigned int len;
 }
-</pre>
+{% endhighlight %}
 
-<ol>
-<li>Create an <a href="http://github.com/mcormier/lilac/blob/master/src/cocoaLite/NSString/NSStringCF.m">NSStringCF</a> class that extends NSString and works as a wrapper for a Core Foundation CFStringRef.Because you're going to need a non-constant implementation of NSString.</li>
-</ol>
+Create an <a href="http://github.com/mcormier/lilac/blob/master/src/cocoaLite/NSString/NSStringCF.m">NSStringCF</a> class that extends NSString and works as a wrapper for a Core Foundation CFStringRef.Because you're going to need a non-constant implementation of NSString.
+
 So I defined NSString, and NSArray, and I could have implemented NSData but I didn't. I felt I had gotten a good feeling as to how much work was required to create Objective-C wrappers for all the Core Foundation objects; a lot.
 
 Later I followed <a href="http://www.jayson.in/programming/objective-c-programming-in-windows-gnustep-projectcenter.html">a tutorial</a> on how to install GNUStep and create a HelloWorld application.  The installation for GNUStep strikes me as odd.  You have to run three installers to use GNUStep, and it is this type of disorganization that makes people shy away from things.  However, once you go through all those hoops, like an obedient show dog, you get the benefit of an Objective-C API (OpenStep/Cocoa) that you can program against.
@@ -150,7 +138,7 @@ Converting lilac to use GNUStep (<a href="http://github.com/mcormier/lilacStep">
 
 <h4>Lilac Version</h4><br>
 
-<pre lang="objc" >
+{% highlight objc %}
 + (NSString*)getURLFromWeblocFile:(NSString*)weblocFilename {
 
   CFDataRef data = NULL;
@@ -199,11 +187,10 @@ Converting lilac to use GNUStep (<a href="http://github.com/mcormier/lilacStep">
 
   return urlString;
 }
- </pre>
+{% endhighlight %}
 
 <h4>LilacStep Version</h4><br>
-
-<pre lang="objc" >
+{% highlight objc %}
 + (NSString*)getURLFromWeblocFile:(NSString*)weblocFilename {
 
   NSData *data  = [[NSData alloc] initWithContentsOfFile:weblocFilename];
@@ -219,7 +206,7 @@ Converting lilac to use GNUStep (<a href="http://github.com/mcormier/lilacStep">
 
   return urlString;
 }
-</pre>
+{% endhighlight %}
 
 <h4>Conclusion</h4><br>
 
