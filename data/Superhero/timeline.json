@@ -1,0 +1,809 @@
+{
+    "timeline":
+    {
+        "headline":"The Rise of the Superhero Movie",
+        "type":"default",
+        "text":"<p>A timeline of the last three decades.</p>",
+        "date": [
+            {
+                "startDate":"1978,12,10",
+                "endDate":"1978,12,10",
+                "headline":"Superman",
+                "text":"<p>The first blockbuster superhero movie.</p>",
+                "asset": {
+                    "media":"/images/superhero/Superman_ver1.jpg",
+                    "credit":"Production Cost: $55 million",
+                    "caption":"Box Office: $300 million"
+                }
+            },
+             {
+                "startDate":"1980,12,5",
+                "endDate":"1980,12,5",
+                "headline":"Flash Gordon",
+                "text":"<p>The first superhero flop. Idolized by John Bennett and his talking teddy bear in Ted.</p>",
+                "asset": {
+                    "media":"/images/superhero/Flash_gordon.jpg",
+                    "credit":"Production Cost: $20 million",
+                    "caption":"Box Office: $27 million"
+                }
+            },{
+                "startDate":"1981,06,19",
+                "headline":"Superman II",
+                "text":"<p>It didn't make as much as Superman.</p>",
+                "asset": {
+                    "media":"/images/superhero/Superman_ii.jpg",
+                    "credit":"Production Cost: $54 million",
+                    "caption":"Box Office: $108 million"
+                }
+             },{
+                "startDate":"1982,05,14",
+                "headline":"Conan the Barbarian",
+                "text":"<p>Not technically a superhero movie but it made lots of money so it's significant.</p>",
+                "asset": {
+                    "media":"/images/superhero/Conan_the_Barbarian.jpg",
+                    "credit":"Production Cost: $16 million",
+                    "caption":"Box Office: $130 million"
+                }
+             }
+             ,{
+                "startDate":"1983,08,01",
+                "headline":"Superman III",
+                "text":"<p>They cut the budget big time to make the third Superman and it made less money too.</p>",
+                "asset": {
+                    "media":"/images/superhero/Superman_iii.jpg",
+                    "credit":"Production Cost: $39 million",
+                    "caption":"Box Office: $70 million"
+                }
+            }
+            ,{
+                "startDate":"1984,06,29",
+                "headline":"Conan the Destroyer",
+                "text":"<p>With a payout like the last Conan movie it's not surprising a second one was made.  They kept the production cost down for a sequel but the divends weren't as great.</p>",
+                "asset": {
+                    "media":"/images/superhero/Conan_the_destroyer.jpg",
+                    "credit":"Production Cost: $18 million",
+                    "caption":"Box Office: $31 million"
+                }
+            }
+             ,{
+                "startDate":"1984,11,21",
+                "headline":"Supergirl",
+                "text":"<p>Financed by the producer of Superman, Alexander Salkind, Warner Bros didn't take a huge bath on the original female superhero bomb.</p>",
+                "asset": {
+                    "media":"/images/superhero/Supergirlposter.jpg",
+                    "credit":"Production Cost: $35 million",
+                    "caption":"Box Office: $14 million"
+                }
+            }
+           ,{
+                "startDate":"1984,11,21",
+                "headline":"Red Sonja",
+                "text":"<p>Women in action movie roles did not perform well in the 80's.</p>",
+                "asset": {
+                    "media":"/images/superhero/Red_sonja_film_poster.jpg",
+                    "credit":"Production Cost: $18 million",
+                    "caption":"Box Office: $7 million"
+                }
+            }
+            ,{
+                "startDate":"1987,07,24",
+                "headline":"Superman IV: The Quest for Peace",
+                "text":"<p>It originally had a larger budget, which was cut.  This movie showed that a Superman movie is not a sure thing and we got a 19 year break because of it.</p>",
+                "asset": {
+                    "media":"/images/superhero/Superman_iv.jpg",
+                    "credit":"Production Cost: $17 million",
+                    "caption":"Box Office: $16 million"
+                }
+            }
+             ,{
+                "startDate":"1989,06,23",
+                "headline":"Batman",
+                "text":"<p>The 80's ended with potentially the most sucessful superhero movie ever.</p>",
+                "asset": {
+                    "media":"/images/superhero/Batman_ver2.jpg",
+                    "credit":"Production Cost: $48 million",
+                    "caption":"Box Office: $411 million"
+                }
+            }
+              ,{
+                "startDate":"1990,12,14",
+                "headline":"Captain America",
+                "text":"<p>Intended for theatrical release but relegated to the direct-to-video market.</p>",
+                "asset": {
+                    "media":"/images/superhero/Captain_america.jpg",
+                    "credit":"Production Cost: $10 million",
+                    "caption":"Direct to Video"
+                }
+            }
+ 
+              ,{
+                "startDate":"1990,08,24",
+                "headline":"Darkman",
+                "text":"<p>A cross between a superhero and classic horror film, Darkman spawned two direct to video sequels, which are available on NetFlix. It was written by Sam Raimi who really wanted to do a Spider-Man movie but couldn't so he wrote this. </p>",
+                "asset": {
+                    "media":"/images/superhero/Darkman_film_poster.jpg",
+                    "credit":"Production Cost: $16 million",
+                    "caption":"Box Office: $49 million"
+                }
+            }
+           ,{
+                "startDate":"1991,04,25",
+                "headline":"The Punisher",
+                "text":"<p>Released in theatres worldwide, but relegated to a direct-to-video release in the US market.<p>",
+                "asset": {
+                    "media":"/images/superhero/Punisher89poster.jpg",
+                    "credit":"Production Cost: $9 million",
+                    "caption":"Direct to Video in the US"
+                }
+            }
+            ,{
+                "startDate":"1991,06,21",
+                "headline":"The Rocketeer",
+                "text":"<p>Like Darkman, another superhero movie written for the big screen, with no comic book origin.<p>",
+                "asset": {
+                    "media":"/images/superhero/Rocketeermovieposter.jpg",
+                    "credit":"Production Cost: $42 million",
+                    "caption":"Box Office: $42 million"
+                }
+            }
+             ,{
+                "startDate":"1992,06,19",
+                "headline":"Batman Returns",
+                "text":"<p>The second and last Tim Burton Batman movie, cost double the price and made less money. A 'parental backlash' against the sex and violence caused McDonald's to stop a Happy Meal tie-in.  The next two Batman movies are much more kid friendly but are also abysmal movies. <p>",
+                "asset": {
+                    "media":"/images/superhero/Batman_returns_poster2.jpg",
+                    "credit":"Production Cost: $80 million",
+                    "caption":"Box Office: $277 million"
+                }
+            }
+              ,{
+                "startDate":"1994,07,01",
+                "headline":"The Shadow",
+                "text":"<p>They were hoping to turn The Shadow into a money churning franchise. There was a Super Nintendo game that wasn't released and planned sequels but the disappointing box office performance but a kiboshed it. <p>",
+                "asset": {
+                    "media":"/images/superhero/Shadowpost.jpg",
+                    "credit":"Production Cost: $40 million",
+                    "caption":"Box Office: $48 million"
+                }
+            }
+               ,{
+                "startDate":"1993,08,06",
+                "headline":"Meteor Man",
+                "text":"<p><b>Roger Ebert</b>  'The movie contains big laughs and moments of genuine feeling, but it seems to be put together out of assorted inspirations that were never assembled into one coherent story line.' <p> <p>Sounds like a description of most superhero parody movies. </p> ",
+                "asset": {
+                    "media":"/images/superhero/Meteor_man.jpg",
+                    "credit":"Production Cost: $30 million",
+                    "caption":"Box Office: $8 million"
+                }
+            }
+                ,{
+                "startDate":"1994,08,19",
+                "headline":"Blankman",
+                "text":"<p>Damon Wayans was ahead of the curve, releasing a superhero parody movie half a decade before we were truly inundated by superhero movies at the box office.<p>",
+                "asset": {
+                    "media":"/images/superhero/Blankman.jpg",
+                    "credit":"Production Cost: Unknown/unsuccessful",
+                    "caption":"Box Office: $8 million"
+                }
+            }
+                 ,{
+                "startDate":"1995,06,30",
+                "headline":"Judge Dredd",
+                "text":"<p>John Wagner the creator of Judge Dredd has been quoted as saying that the film 'told the wrong story'.  The major problem with Dredd is that it has a predominantly British pedigree and doesn't translate so well in North America.  <p>",
+                "asset": {
+                    "media":"/images/superhero/Judge_Dredd.jpg",
+                    "credit":"Production Cost: $90 million",
+                    "caption":"Box Office: $113 million"
+                }
+            }
+                  ,{
+                "startDate":"1995,06,16",
+                "headline":"Batman Forever",
+                "text":"<p>The directors cut was two hours and 40 minutes, but was trimmed down two two hours to make it less dark and more kid friendly. The darkness and pain that Tim Burton showed us is traded in for an amusement park ride like script to create a vehicle for excessive commercialization. <p>",
+                "asset": {
+                    "media":"/images/superhero/Batman_forever_ver7.jpg",
+                    "credit":"Production Cost: $100 million",
+                    "caption":"Box Office: $336 million"
+                }
+            }
+               ,{
+                "startDate":"1997,08,01",
+                "headline":"Spawn",
+                "text":"<p>Created by Todd McFarlane, the guy who made Spider-Man a hot comic again by making his webs look cool.  A sequel has been planned for a while now but it's been stranded in development hell.  McFarlane is a shrewd businessman but also a litiguous one, and probably a pain in the ass to work with. <p>",
+                "asset": {
+                    "media":"/images/superhero/Spawnmovieposter.jpg",
+                    "credit":"Production Cost: $40 million",
+                    "caption":"Box Office: $87 million"
+                }
+            }
+                ,{
+                "startDate":"1997,06,20",
+                "headline":"Batman & Robin",
+                "text":"<p>Two years isn't a lot of time to wait for a Batman film and the public voted with their disposable cash at the box office.  The film was derided for the fact that the Batman and Robin's suits had rubber nipples. <p>",
+                "asset": {
+                    "media":"/images/superhero/Batman_robin_poster.jpg",
+                    "credit":"Production Cost: $140 million",
+                    "caption":"Box Office: $238 million"
+                }
+            }
+                 ,{
+                "startDate":"1998,08,21",
+                "headline":"Blade",
+                "text":"<p>Marvel's first film success, after two direct-to-video disasters and Howard the Duck. <p>",
+                "asset": {
+                    "media":"/images/superhero/Blade_movie.jpg",
+                    "credit":"Production Cost: $45 million",
+                    "caption":"Box Office: $131 million"
+                }
+            }
+                  ,{
+                "startDate":"1999,07,30",
+                "headline":"Mystery Men",
+                "text":"<p>One of the better superhero comedies out there, but Janeane Garofalo couldn't save it at the box office. <p>",
+                "asset": {
+                    "media":"/images/superhero/Mystery_Men_film_poster.jpg",
+                    "credit":"Production Cost: $68 million",
+                    "caption":"Box Office: $33 million"
+                }
+            }
+                   ,{
+                "startDate":"2000,11,14",
+                "headline":"Unbreakable",
+                "text":"<p>After surprising us with 'I see dead people', M. Night Shyamalan created another hit movie with a superhero theme.  In the year 2000 Shyamalan was a hot commodity, this was before the days of The Last Airbender and After Earth. <p>",
+                "asset": {
+                    "media":"/images/superhero/Unbreakableposterwillis.jpg",
+                    "credit":"Production Cost: $75 million",
+                    "caption":"Box Office: $248 million"
+                }
+            }
+                    ,{
+                "startDate":"2000,07,14",
+                "headline":"X-Men",
+                "text":"<p>Russell Crowe was offered the part of Wolverine but turned it down. Hugh Jackman was given the role and it launched his career. <p>",
+                "asset": {
+                    "media":"/images/superhero/XMen1poster.jpg",
+                    "credit":"Production Cost: $75 million",
+                    "caption":"Box Office: $296 million"
+                }
+            }
+                     ,{
+                "startDate":"2002,05,03",
+                "headline":"Spider-Man",
+                "text":"<p>Directed by Sam Raimi, who wrote DarkMan because he couldn't get the rights to do a big name superhero, he finally gets his wish and makes everyone a pile of money. <p>",
+                "asset": {
+                    "media":"/images/superhero/SpiderMan.jpg",
+                    "credit":"Production Cost: $140 million",
+                    "caption":"Box Office: $822 million"
+                }
+            }
+                      ,{
+                "startDate":"2002,03,22",
+                "headline":"Blade II",
+                "text":"<p>Blade was never a super hit but the first movie brought in a respectable return. The second movie did as well as the first one. <p>",
+                "asset": {
+                    "media":"/images/superhero/Blade_II_movie.jpg",
+                    "credit":"Production Cost: $55 million",
+                    "caption":"Box Office: $155 million"
+                }
+            }
+                       ,{
+                "startDate":"2003,06,20",
+                "headline":"Hulk",
+                "text":"<p>Not produced by Marvel because they sold the movie rights.  Marvel Studios was able to reacquire the movie rights after the film was released.<p>",
+                "asset": {
+                    "media":"/images/superhero/Hulk_movie.jpg",
+                    "credit":"Production Cost: $137 million",
+                    "caption":"Box Office: $245 million"
+                }
+            }
+                        ,{
+                "startDate":"2003,02,14",
+                "headline":"Daredevil",
+                "text":"<p>Most people's defense as to why Ben Affleck won't make a good Batman.  Colin Farrell is awesome as Bullseye, probably because Colin Farrell is totally awesome, watch In Bruges if you need convincing .<p>",
+                "asset": {
+                    "media":"/images/superhero/Daredevil_poster.JPG",
+                    "credit":"Production Cost: $78 million",
+                    "caption":"Box Office: $179 million"
+                }
+            }
+                         ,{
+                "startDate":"2003,05,02",
+                "headline":"X2",
+                "text":"<p>The strength of the second X-Men movie was that it wasn't a story neatly wrapped in two hours. There are loose ends.<p>",
+                "asset": {
+                    "media":"/images/superhero/X2_poster.jpg",
+                    "credit":"Production Cost: $110 million",
+                    "caption":"Box Office: $408 million"
+                }
+            }
+                          ,{
+                "startDate":"2004,05,02",
+                "headline":"Hellboy",
+                "text":"<p>Guillermo del Toro, director of Blade II is given a crack at the Hellboy franchise.<p>",
+                "asset": {
+                    "media":"/images/superhero/Hellboy_poster.jpg",
+                    "credit":"Production Cost: $66 million",
+                    "caption":"Box Office: $99 million"
+                }
+            }
+                           ,{
+                "startDate":"2004,04,16",
+                "headline":"The Punisher",
+                "text":"<p>Fifteen years after the direct-to-video disaster The Punisher makes it to the big screen but doesn't really make any money.<p>",
+                "asset": {
+                    "media":"/images/superhero/Punisher_ver2.jpg",
+                    "credit":"Production Cost: $33 million",
+                    "caption":"Box Office: $54.6 million"
+                }
+            }
+                            ,{
+                "startDate":"2004,06,30",
+                "headline":"Spider-Man 2",
+                "text":"<p>Spider-Man was a huge success and it's not surprising a sequel was made. The sequel was started immediately after the release of the first movie and signaled the start of the great Spider-Man money milking machine.<p>",
+                "asset": {
+                    "media":"/images/superhero/Spider-Man_2_Poster.jpg",
+                    "credit":"Production Cost: $200 million",
+                    "caption":"Box Office: $784 million"
+                }
+            }
+                             ,{
+                "startDate":"2004,07,19",
+                "headline":"Catwoman",
+                "text":"<p>This film never should have been made. It was initially conceived in the early nineties when Batman was still a hot commodity, before being destroyed by plastic nipples.  It languished in development hell for years with Michelle Pfeiffer and then Asley Judd until it was finally shot with Halle Berry.<p>",
+                "asset": {
+                    "media":"/images/superhero/Catwoman_poster.jpg",
+                    "credit":"Production Cost: $100 million",
+                    "caption":"Box Office: $82 million"
+                }
+            }
+                              ,{
+                "startDate":"2004,11,19",
+                "headline":"The Incredibles",
+                "text":"<p>If you are looking for a funny superhero movie, this is it.<p>",
+                "asset": {
+                    "media":"/images/superhero/The_Incredibles.jpg",
+                    "credit":"Production Cost: $92 million",
+                    "caption":"Box Office: $631 million"
+                }
+            }
+                               ,{
+                "startDate":"2004,12,08",
+                "headline":"Blade: Trinity",
+                "text":"<p>It wasn't a bomb but the Blade cow ran out of milk by the third installment of the series.<p>",
+                "asset": {
+                    "media":"/images/superhero/Blade_Trinity_poster.jpg",
+                    "credit":"Production Cost: $65 million",
+                    "caption":"Box Office: $128 million"
+                }
+            }
+                                ,{
+                "startDate":"2005,06,10",
+                "headline":"The Adventures of Sharkboy & Lavagirl",
+                "text":"<p>It's a kid's movie so it shouldn't be measured against big blockbuster superhero movies.<p>",
+                "asset": {
+                    "media":"/images/superhero/shark_boy.jpg",
+                    "credit":"Production Cost: $50 million",
+                    "caption":"Box Office: $69 million"
+                }
+            }
+                                 ,{
+                "startDate":"2005,06,15",
+                "headline":"Batman Begins",
+                "text":"<p>One of the only superhero series where the second film made more significantly more than the first.<p>",
+                "asset": {
+                    "media":"/images/superhero/Batman_Begins_Poster.jpg",
+                    "credit":"Production Cost: $150 million",
+                    "caption":"Box Office: $374 million"
+                }
+            }
+                                  ,{
+                "startDate":"2005,06,08",
+                "headline":"Fantastic Four",
+                "text":"<p>Like X-Men Fantastic Four has always been a moderate performer at the box office.<p>",
+                "asset": {
+                    "media":"/images/superhero/Fantastic_Four_poster.jpg",
+                    "credit":"Production Cost: $100 million",
+                    "caption":"Box Office: $330 million"
+                }
+            }
+                                   ,{
+                "startDate":"2005,01,14",
+                "headline":"Elektra",
+                "text":"<p>Compared to other Marvel franchises Elektra is a failure, but compared to Catwoman and Supergirl it's the most successful female superhero movie ever.<p>",
+                "asset": {
+                    "media":"/images/superhero/Elektra_teaser.jpg",
+                    "credit":"Production Cost: $43 million",
+                    "caption":"Box Office: $57 million"
+                }
+            }
+                                    ,{
+                "startDate":"2006,06,28",
+                "headline":"Superman Returns",
+                "text":"<p>Directed by the dude who directed the first two X-Men movies.<p>",
+                "asset": {
+                    "media":"/images/superhero/Superman_Returns.jpg",
+                    "credit":"Production Cost: $204 million",
+                    "caption":"Box Office: $391 million"
+                }
+            }
+                                     ,{
+                "startDate":"2006,05,26",
+                "headline":"X-Men: The Last Stand",
+                "text":"<p>The third movie in the series had a new director because Bryan Singer was busy working on Superman Returns.<p>",
+                "asset": {
+                    "media":"/images/superhero/X-Men_The_Last_Stand.jpg",
+                    "credit":"Production Cost: $210 million",
+                    "caption":"Box Office: $459 million"
+                }
+            }
+                                      ,{
+                "startDate":"2006,06,21",
+                "headline":"My Super Ex-Girlfriend",
+                "text":"<p>Quite a novel idea for a superhero comedy.<p>",
+                "asset": {
+                    "media":"/images/superhero/Exgirlposter.jpg",
+                    "credit":"Production Cost: $30 million",
+                    "caption":"Box Office: $61 million"
+                }
+            }
+                                       ,{
+                "startDate":"2007,05,04",
+                "headline":"Spider-Man 3",
+                "text":"<p>Another two years, another Spider-Man movie. In the future we will measure time by Spider-Man movies.<p>",
+                "asset": {
+                    "media":"/images/superhero/Spider-Man_3_Poster.jpg",
+                    "credit":"Production Cost: $258 million",
+                    "caption":"Box Office: $891 million"
+                }
+            }
+                                        ,{
+                "startDate":"2007,05,04",
+                "headline":"Fantastic Four: Rise of the Silver Surfer",
+                "text":"<p>It's okay to rewrite the story to make it work better for the big-screen but making Galactus a giant space cloud is the wrong direction to take things.  <p>",
+                "asset": {
+                    "media":"/images/superhero/Fantastic_Four_2_Poster.jpg",
+                    "credit":"Production Cost: $130 million",
+                    "caption":"Box Office: $289 million"
+                }
+            }
+                                         ,{
+                "startDate":"2008,05,02",
+                "headline":"Iron Man",
+                "text":"<p>The film rights for Iron Man went from Universal Studios (1990) to Fox (1996) to New Line (2001) before returning home to Marvel in 2005.<p>",
+                "asset": {
+                    "media":"/images/superhero/Ironmanposter.jpg",
+                    "credit":"Production Cost: $140 million",
+                    "caption":"Box Office: $585 million"
+                }
+            }
+                                          ,{
+                "startDate":"2008,06,13",
+                "headline":"The Incredible Hulk",
+                "text":"<p>When I watched this movie I thought it was a sequel as the previous was only released five years prior, apparently it's a reboot. Apparently Norton rewrote the script.<p>",
+                "asset": {
+                    "media":"/images/superhero/The_Incredible_Hulk_poster.jpg",
+                    "credit":"Production Cost: $150 million",
+                    "caption":"Box Office: $263 million"
+                }
+            }
+                                           ,{
+                "startDate":"2008,06,02",
+                "headline":"Hancock",
+                "text":"<p>The most successful live action super hero comedy.<p>",
+                "asset": {
+                    "media":"/images/superhero/Hancockposter.jpg",
+                    "credit":"Production Cost: $150 million",
+                    "caption":"Box Office: $624 million"
+                }
+            }
+                                            ,{
+                "startDate":"2008,06,11",
+                "headline":"Hellboy 2: The Golden Army",
+                "text":"<p>Hellboy 2 made more money than the first but the margins are still thin.  Del Toro was given complete creative freedom with the sequel so he's obviously anxious to do a third one.  Mike Mignola the creator of Hellboy is adamant that there's no Hellboy 3 movie in the works.<p>",
+                "asset": {
+                    "media":"/images/superhero/Hellboy_2_poster.jpg",
+                    "credit":"Production Cost: $85 million",
+                    "caption":"Box Office: $160 million"
+                }
+            }
+                                             ,{
+                "startDate":"2008,07,14",
+                "headline":"The Dark Knight",
+                "text":"<p>The most impressive thing about this movie, besides Heath Ledger's acting is it's phenomenal return rate.  Batman begins cost 150 Million to make and brought in 374 Million at the box office (a naive return rate of 2.49), on the other hand this sequel cost 35 million more to produce but brought in over a billion dollars, giving it a 5.43 return rate.  Although that return rate metric is naive, the difference between the two movies is astounding.<p>",
+                "asset": {
+                    "media":"/images/superhero/Dark_Knight.jpg",
+                    "credit":"Production Cost: $185 million",
+                    "caption":"Box Office: $1004 million"
+                }
+            }
+                                              ,{
+                "startDate":"2008,12,05",
+                "headline":"Punisher: War Zone",
+                "text":"<p>Punisher movies and Judge Dredd movies, although an adolescents violent movie wet dream, don't make money.  They're dark and difficult to find the humanity in, but I'm sure we'll see other reboots that gobble more cash. <p>",
+                "asset": {
+                    "media":"/images/superhero/Punisherwarzoneteaser.jpg",
+                    "credit":"Production Cost: $35 million",
+                    "caption":"Box Office: $10 million"
+                }
+            }
+                                               ,{
+                "startDate":"2008,12,25",
+                "headline":"The Spirit",
+                "text":"<p><b>Rober Ebert</b> - 'There is not a trace of human emotion in it. To call the characters cardboard is to insult a useful packing material'<p>",
+                "asset": {
+                    "media":"/images/superhero/Thespiritposter.jpg",
+                    "credit":"Production Cost: $60 million",
+                    "caption":"Box Office: $39 million"
+                }
+            }
+                                                ,{
+                "startDate":"2009,03,06",
+                "headline":"Watchmen",
+                "text":"<p>It's long at 162 minutes.  The director's cut weighs in over 3 hours at 186 minutes, and there is also an ultimate cut which is 215 minutes long.<p>",
+                "asset": {
+                    "media":"/images/superhero/Watchmen_film_poster.jpg",
+                    "credit":"Production Cost: $130 million",
+                    "caption":"Box Office: $185 million"
+                }
+            }
+                                                 ,{
+                "startDate":"2009,04,10",
+                "headline":"Dragonball Evolution",
+                "text":"<p>Dragonball is closer to a fantasy movie than a superhero movie, but 2009 was a slow year for superhero movies and I'm trying to manipulate the statistics to make it look like we're being completely inudated with superhero movies.<p>",
+                "asset": {
+                    "media":"/images/superhero/Dragonballposter.jpg",
+                    "credit":"Production Cost: $30 million",
+                    "caption":"Box Office: $57 million"
+                }
+            }
+                                                  ,{
+                "startDate":"2009,05,01",
+                "headline":"X-Men Origins: Wolverine",
+                "text":"<p>The title of this movie implies that other X-Men Origins movies were planned, but it's doubtful.  Wolverine has always been the most popular X-Men character by a large margin.  No other character could hold it's own without being a box office flop.<p>",
+                "asset": {
+                    "media":"/images/superhero/X-Men_Origins_Wolverine.jpg",
+                    "credit":"Production Cost: $150 million",
+                    "caption":"Box Office: $377 million"
+                }
+            }
+                                                   ,{
+                "startDate":"2010,04,16",
+                "headline":"Kick-Ass",
+                "text":"<p>It's supposed to be a satire, but does not come off as one. Kick-Ass becomes consumed with the violence it purportedly satires.<p>",
+                "asset": {
+                    "media":"/images/superhero/Kick-Ass_film_poster.jpg",
+                    "credit":"Production Cost: $28 million",
+                    "caption":"Box Office: $96 million"
+                }
+            }
+                                                    ,{
+                "startDate":"2010,05,07",
+                "headline":"Iron Man 2",
+                "text":"<p>Two years after the first Iron Man we get a second Iron Man.  It is no longer the 80's, people no longer consider sequels to be money grabs, actually they do but the audience has been trained to accept it as part of life, because of Spider-Man, a movie every two years for a franchise is now considered normal.<p>",
+                "asset": {
+                    "media":"/images/superhero/Iron_Man_2_poster.jpg",
+                    "credit":"Production Cost: $200 million",
+                    "caption":"Box Office: $624 million"
+                }
+            }
+                                                     ,{
+                "startDate":"2010,11,05",
+                "headline":"Megamind",
+                "text":"<p>The critics panned it as unoriginal, and although the main characters are spoofs on Superman and Lex Luthor, the spoof characters are written well enough to create a believable, self-sustaining universe..<p>",
+                "asset": {
+                    "media":"/images/superhero/Megamind2010Poster.jpg",
+                    "credit":"Production Cost: $130 million",
+                    "caption":"Box Office: $321 million"
+                }
+            }
+                                                      ,{
+                "startDate":"2011,01,14",
+                "headline":"The Green Hornet",
+                "text":"<p>It's a disappointing film in general, but there is a 1 minute scene where Kato makes coffee that is brilliant.  <p>",
+                "asset": {
+                    "media":"/images/superhero/The_Green_Hornet_Poster.jpg",
+                    "credit":"Production Cost: $120 million",
+                    "caption":"Box Office: $227 million"
+                }
+            }
+                                                       ,{
+                "startDate":"2011,02,18",
+                "headline":"I Am Number Four",
+                "text":"<p>A movie adaptation of the first in a series of young adult fiction novels, Disney's Touchstone was hoping for a bigger take at the box office so they could pull the trigger on a Twilight/Harry Potter level franchise. <p>",
+                "asset": {
+                    "media":"/images/superhero/I_Am_Number_Four_Poster.jpg",
+                    "credit":"Production Cost: $50 million",
+                    "caption":"Box Office: $150 million"
+                }
+            }
+                                                        ,{
+                "startDate":"2011,04,01",
+                "headline":"Super",
+                "text":"<p>Similar to Kick-Ass but with genuine dead-pan humour, it's less of a satire and more of just an odd inide humour flick.  Ellen page gets her face blown off.<p>",
+                "asset": {
+                    "media":"/images/superhero/Super_Poster.jpg",
+                    "credit":"Production Cost: $2.5 million",
+                    "caption":"Box Office: $327, 716"
+                }
+            }
+                                                         ,{
+                "startDate":"2011,05,06",
+                "headline":"Thor",
+                "text":"<p>One of two movies that came out in 2011, to act, as a fluffer, keeping the audience prepped for The Avengers money shot, the following year. Not the greatest movie, but a great marketing play in the grand scheme of things. <p>",
+                "asset": {
+                    "media":"/images/superhero/Thor_Poster.jpg",
+                    "credit":"Production Cost: $150 million",
+                    "caption":"Box Office: $449 million"
+                }
+            }
+                                                          ,{
+                "startDate":"2011,06,03",
+                "headline":"X-Men: First Class",
+                "text":"<p>The first in a planned trilogy. The critics liked it and it didn't lose money, the second in the series will be released this summer and will probably make more money because, well Wolverine is in it. <p>",
+                "asset": {
+                    "media":"/images/superhero/X-MenFirstClassMoviePoster.jpg",
+                    "credit":"Production Cost: $160 million",
+                    "caption":"Box Office: $354 million"
+                }
+            }
+                                                           ,{
+                "startDate":"2011,06,17",
+                "headline":"Green Lantern",
+                "text":"<p> There is a rumour of a Justice League movie and Green Lantern would make an appearance if that happens. Green lantern is to Justice League what the Hulk is to The Avengers, neither get's a huge box office draw, it's just a coincidence that they're both green.  It didn't help things that Green Lantern fights a big space cloud called Parallax.  Space clouds just aren't that scary and don't entice movie-goers well in trailers.<p>",
+                "asset": {
+                    "media":"/images/superhero/Green_Lantern_poster.jpg",
+                    "credit":"Production Cost: $200 million",
+                    "caption":"Box Office: $219 million"
+                }
+            }
+                                                            ,{
+                "startDate":"2011,07,22",
+                "headline":"Captain America: The First Avenger",
+                "text":"<p>It's odd to have a subtitle for a movie that starts a series. This was another smart move by Marvel.  By creating a two-part title they could easily offer international markets where an American-centric title might not play so well, the option to retitle the movie as simply The First Avenger. Russia, South Korea and the Ukraine all chose to do so.<p>",
+                "asset": {
+                    "media":"/images/superhero/The_First_Avenger_poster.jpg",
+                    "credit":"Production Cost: $140 million",
+                    "caption":"Box Office: $370 million"
+                }
+            }
+                                                             ,{
+                "startDate":"2012,07,11",
+                "headline":"Dredd",
+                "text":"<p>The Dredd fans and the creator of Judge Dredd enjoyed the film but the public didn't go see it in droves.  The summer of 2012 was bad timing for this movie, with seven superhero movie releases and three of them solid bread winners (Spider-Man, The Avengers and Batman) with $100 million dollar marketing budgets. If they spent more money to market Dredd they would have just lost more money.  It might have made an extra ten or twenty million if they could have released it in 2011 with the right marketing.  In the end, unemotional killing machines like Dredd and The Punisher have always been a hard sell.<p>",
+                "asset": {
+                    "media":"/images/superhero/Dredd2012Poster.jpg",
+                    "credit":"Production Cost: $45 million",
+                    "caption":"Box Office: $41 million"
+                }
+            }
+                                                              ,{
+                "startDate":"2012,07,20",
+                "headline":"The Dark Knight Rises",
+                "text":"<p>Personally I found this movie overly long, but this appears to be an overarching trend with movies, blame Peter Jackson. It made over a billion and 60% of that was in worldwide sales.  It showed in a lot of IMAX theatres which have higher ticket prices and definitely helped to boost those numbers. <p>",
+                "asset": {
+                    "media":"/images/superhero/Dark_knight_rises_poster.jpg",
+                    "credit":"Production Cost: $230 million",
+                    "caption":"Box Office: $1084 million"
+                }
+            }
+                                                               ,{
+                "startDate":"2012,07,03",
+                "headline":"The Amazing Spider-man",
+                "text":"<p>Has it been two years, oh wait it's been five years and this is a reboot.  The quickest reboot in history by they same studio.  Money, money, money!! <p>",
+                "asset": {
+                    "media":"/images/superhero/The_Amazing_Spider-Man.jpg",
+                    "credit":"Production Cost: $230 million",
+                    "caption":"Box Office: $752 million"
+                }
+            }
+                                                                ,{
+                "startDate":"2012,05,04",
+                "headline":"The Avengers",
+                "text":"<p>The Avengers is entertaining when we get to see our 'team' of heros disagree and argue, the action scenes are boring part of the movie and only present because they are obligatory. If a Justice League movie ever happens it's success will probably be determined by the fact that Batman and Superman don't get along. <p>",
+                "asset": {
+                    "media":"/images/superhero/TheAvengers2012Poster.jpg",
+                    "credit":"Production Cost: $230 million",
+                    "caption":"Box Office: $1519 million"
+                }
+            }
+                                                                 ,{
+                "startDate":"2012,02,17",
+                "headline":"Ghost Rider: Spirit of Vengeance",
+                "text":"<p>This movie works as well as 20$ of diesel in a gas engine. Chuck it in the bin with Dredd and The Punisher. <p>",
+                "asset": {
+                    "media":"/images/superhero/Ghost_Rider_2_Poster.jpg",
+                    "credit":"Production Cost: $57 million",
+                    "caption":"Box Office: $132 million"
+                }
+            }
+                                                                  ,{
+                "startDate":"2012,02,03",
+                "headline":"Chronicle",
+                "text":"<p>The Blair Witch Project of superhero movies. There is talk of a sequel which will do as well as the sequel to Blair Witch that you didn't know existed. <p>",
+                "asset": {
+                    "media":"/images/superhero/Chronicle_Film_poster.jpg",
+                    "credit":"Production Cost: $12 million",
+                    "caption":"Box Office: $126 million"
+                }
+            }
+                                                                   ,{
+                "startDate":"2013,08,16",
+                "headline":"Kick-Ass 2",
+                "text":"<p>Jim Carrey baffles everyone by withdrawing support for the movie he starred in after a school shooting, trumping  his ridiculous statement with his former wife (Jenny McCarthy) that vaccines cause autism in 2008. <p>",
+                "asset": {
+                    "media":"/images/superhero/Kick-Ass_2.jpg",
+                    "credit":"Production Cost: $28 million",
+                    "caption":"Box Office: $59 million"
+                }
+            }
+                                                                    ,{
+                "startDate":"2013,05,03",
+                "headline":"Iron Man 3",
+                "text":"<p>The third Iron Man movie makes more than the first two combined.  It gets a superhuman boost from The Avengers movie the previous year. The question now is how much more milk is there left in The Avengers money making machine.  When will audience fatigue set in, moving the franchise from the hot section to the not section. <p>",
+                "asset": {
+                    "media":"/images/superhero/Iron_Man_3_poster.jpg",
+                    "credit":"Production Cost: $200 million",
+                    "caption":"Box Office: $1215 million"
+                }
+            }
+                                                                     ,{
+                "startDate":"2013,06,14",
+                "headline":"Man of Steel",
+                "text":"<p>The box office numbers were better than the 2006 Superman Returns but not great considering that Thor made almost as much money in the fall as this movie made in prime summer blockbuster season. It's a competetive superhero movie now compared to the 80's when Superman had free reign.<p>",
+                "asset": {
+                    "media":"/images/superhero/ManofSteelFinalPoster.jpg",
+                    "credit":"Production Cost: $225 million",
+                    "caption":"Box Office: $663 million"
+                }
+            }
+                                                                      ,{
+                "startDate":"2013,07,26",
+                "headline":"The Wolverine",
+                "text":"<p>Some people just have a hard-on for Wolverine.  When I was in grade school I sat next to a guy that spent most of his time drawing Teenage Mutant Ninja Turtles and Wolverine.  He spent a lot of time getting the claws right. <p>",
+                "asset": {
+                    "media":"/images/superhero/The_Wolverine_posterUS.jpg",
+                    "credit":"Production Cost: $120 million",
+                    "caption":"Box Office: $414 million"
+                }
+            }
+                                                                       ,{
+                "startDate":"2013,11,08",
+                "headline":"Thor: The Dark World",
+                "text":"<p>Thor, like, Iron Man made more money than it's predecessor, boosted by feeding frenzy of The Avengers the year before.  In 2014 there will be four movies based on Marvel characters (Captain America, Spider-Man, X-Men, Guardians of the Galaxy), two are being produced by Marvel Studios, the other two by Fox and Sony. <p>",
+                "asset": {
+                    "media":"/images/superhero/Thor_dark_world.jpg",
+                    "credit":"Production Cost: $170 million",
+                    "caption":"Box Office: $627 million"
+                }
+            }
+          
+        ]
+,
+        "era": [
+            {  "startDate":"1978,12,10",
+                "endDate":"1987,07,24",
+                "headline":"The Rise and Fall of Superman",
+                "text":"<p>Body text goes here, some HTML is OK</p>"
+            },
+            {  "startDate":"1989,06,23",
+                "endDate":"1997,06,20",
+                "headline":"The Rise and Fall of Batman",
+                "text":"<p>Body text goes here, some HTML is OK</p>"
+            },
+            {  "startDate":"2002,05,03",
+                "endDate":"2007,06,20",
+                "headline":"The Rise and Fall of Spider-Man",
+                "text":"<p>Body text goes here, some HTML is OK</p>"
+            },
+            {  "startDate":"2008,05,03",
+                "endDate":"2014,06,20",
+                "headline":"The Age of The Avengers",
+                "text":"<p>Body text goes here, some HTML is OK</p>"
+            }
+
+
+
+
+        ]
+    }
+}
