@@ -179,6 +179,16 @@
                 }
             }
               ,{
+                "startDate":"1994,07,29",
+                "headline":"The Mask",
+                "text":"<p>It didn't cost much to make, reaped bucket loads of moola and sky-rocketed Jim Carrey's career. <p>",
+                "asset": {
+                    "media":"/images/superhero/The_Mask.jpg",
+                    "credit":"Production Cost: $23 million",
+                    "caption":"Box Office: $351 million"
+                }
+            }
+              ,{
                 "startDate":"1994,07,01",
                 "headline":"The Shadow",
                 "text":"<p>They were hoping to turn The Shadow into a money churning franchise. There was a Super Nintendo game that wasn't released and planned sequels but the disappointing box office performance but a kiboshed it. <p>",
