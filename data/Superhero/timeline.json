@@ -8,7 +8,6 @@
         "date": [
             {
                 "startDate":"1978,12,10",
-                "endDate":"1978,12,10",
                 "headline":"Superman",
                 "text":"<p>The first blockbuster superhero movie.</p>",
                 "asset": {
@@ -18,8 +17,18 @@
                 }
             },
              {
+                "startDate":"1980,06,5",
+                "headline":"Hero at Large",
+                "text":"<p>I only stumbled across this movie by accident while perusing wikipedia.  It worries me because it implies that there are probably a bunch of movies I haven't cataloged from the 80s that contradict that fact that there are more superhero movies now then then. If I find too many movies from the 80s I'll just have to find a way to skew the stats in my favour. </p>",
+                "asset": {
+                    "media":"/images/superhero/Hero_at_large.jpg",
+                    "credit":"Production Cost: ? million",
+                    "caption":"Box Office: $16 million"
+                }
+            },
+ 
+             {
                 "startDate":"1980,12,5",
-                "endDate":"1980,12,5",
                 "headline":"Flash Gordon",
                 "text":"<p>The first superhero flop. Idolized by John Bennett and his talking teddy bear in Ted.</p>",
                 "asset": {
@@ -577,6 +586,17 @@
                     "caption":"Box Office: $96 million"
                 }
             }
+                                                   ,{
+                "startDate":"2010,02,19",
+                "headline":"Defendor",
+                "text":"<p>Only released theatrically in Canada. Sony acquired most of the international rights to the film and decided to send it to a direct-to-video death. The production section of the wikipedia entry for this movie reads like a sad story.<p>",
+                "asset": {
+                    "media":"/images/superhero/Defendor_poster.jpg",
+                    "credit":"Production Cost: $4 million",
+                    "caption":"Box Office: $44,462 (Canada only)"
+                }
+            }
+ 
                                                     ,{
                 "startDate":"2010,05,07",
                 "headline":"Iron Man 2",

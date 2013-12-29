@@ -184,6 +184,7 @@ While compiling the data I had to reflect on the actual definition of a superher
     <tr><td>Superman</td><td>55</td><td>300</td><td>5.45</td></tr>
     <tr id="1980" class="yearRow"><td colspan=4>1980</td></tr>
     <tr><td>Flash Gordon</td><td>20</td><td>27</td><td>1.35</td></tr>
+    <tr><td>Hero at Large</td><td>?</td><td>15</td><td>?</td></tr>
     <tr id="1981" class="yearRow"><td colspan=4>1981</td></tr>
     <tr><td>Superman II</td><td>54</td><td>108</td><td>2</td></tr>
     <tr id="1982" class="yearRow"><td colspan=4>1982</td></tr>
@@ -267,6 +268,7 @@ While compiling the data I had to reflect on the actual definition of a superher
     <tr><td>X-Men Origins: Wolverine</td><td>150</td><td>373</td><td>2.49</td></tr>
     <tr id="2010" class="yearRow"><td colspan=4>2010</td></tr>
     <tr><td>Kick-ass</td><td>28</td><td>96</td><td>3.43</td></tr>
+    <tr><td>Defendor</td><td>4</td><td>0.044</td><td class="flop">0.01</td></tr>
     <tr><td>Paperman?</td><td>?</td><td>?</td><td>?</td></tr>
     <tr><td>Iron Man 2</td><td>200</td><td>623</td><td>3.12</td></tr>
     <tr><td>Mega Mind</td><td>130</td><td>321</td><td>2.47</td></tr>
