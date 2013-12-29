@@ -36,7 +36,8 @@
                     "credit":"Production Cost: $20 million",
                     "caption":"Box Office: $27 million"
                 }
-            },{
+            },
+            {
                 "startDate":"1981,06,19",
                 "headline":"Superman II",
                 "text":"<p>It didn't make as much as Superman.</p>",
@@ -45,7 +46,18 @@
                     "credit":"Production Cost: $54 million",
                     "caption":"Box Office: $108 million"
                 }
-             },{
+             },
+            {
+                "startDate":"1981,08,07",
+                "headline":"Condorman",
+                "text":"<p>An action adventure romantic comdey spy story.</p>",
+                "asset": {
+                    "media":"/images/superhero/Condormanposter.jpg",
+                    "credit":"Production Cost: ?",
+                    "caption":"Box Office: ?"
+                }
+             },
+{
                 "startDate":"1982,05,14",
                 "headline":"Conan the Barbarian",
                 "text":"<p>Not technically a superhero movie but it made lots of money so it's significant.</p>",

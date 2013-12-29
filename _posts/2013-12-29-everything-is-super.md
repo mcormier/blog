@@ -187,6 +187,7 @@ While compiling the data I had to reflect on the actual definition of a superher
     <tr><td>Hero at Large</td><td>?</td><td>15</td><td>?</td></tr>
     <tr id="1981" class="yearRow"><td colspan=4>1981</td></tr>
     <tr><td>Superman II</td><td>54</td><td>108</td><td>2</td></tr>
+    <tr><td>Condorman</td><td>?</td><td>?</td><td>?</td></tr>
     <tr id="1982" class="yearRow"><td colspan=4>1982</td></tr>
     <tr><td>Conan The Barbarian?</td><td>16</td><td>130</td><td>8.13</td></tr>
     <tr id="1983" class="yearRow"><td colspan=4>1983</td></tr>
