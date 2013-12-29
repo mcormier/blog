@@ -238,6 +238,16 @@
                     "caption":"Box Office: $336 million"
                 }
             }
+                 ,{
+                "startDate":"1996,06,07",
+                "headline":"The Phantom",
+                "text":"<p>The 90s were a time of failed pulp revival movies. <p>",
+                "asset": {
+                    "media":"/images/superhero/Phantompost.jpg",
+                    "credit":"Production Cost: $45 million",
+                    "caption":"Box Office: $17 million"
+                }
+            }
                ,{
                 "startDate":"1997,08,01",
                 "headline":"Spawn",

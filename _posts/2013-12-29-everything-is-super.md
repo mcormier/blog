@@ -219,6 +219,8 @@ While compiling the data I had to reflect on the actual definition of a superher
     <tr id="1995" class="yearRow"><td colspan=4>1995</td></tr>
     <tr><td>Batman Forever</td><td>100</td><td>336</td><td>3.36</td></tr>
     <tr><td>Judge Dredd</td><td>90</td><td>113</td><td>1.26</td></tr>
+    <tr id="1996" class="yearRow"><td colspan=4>1995</td></tr>
+    <tr><td>The Phantom</td><td>45</td><td>17</td><td class="flop">0.38</td></tr>
     <tr id="1997" class="yearRow"><td colspan=4>1997</td></tr>
     <tr><td>Batman and Robin</td><td>140</td><td>113</td><td>1.7</td></tr>
     <tr><td>Spawn</td><td>40</td><td>87</td><td>2.17</td></tr>
