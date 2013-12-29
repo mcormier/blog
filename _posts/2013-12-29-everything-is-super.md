@@ -1,6 +1,7 @@
 ---
 layout: custom
 title:  "Everything is Just Super"
+excerpt: A look at superhero movies over the last three decades.
 
 ---
 
@@ -143,7 +144,7 @@ There seem to be more and more superhero movies being released every year. This 
 Besides the fact that I'm a killjoy, spoil sport, and an old codger, do I have a right to complain?  Are there really more super hero movies being released? 
 This is an easy question to answer with a little determination. So I found a website that listed movie releases by year and created a magical spreadsheet, wrote a blog post, made some chart porn, and will talk about said chart porn until the cows go home.  Don't take this as the definitive list, but it's in the ballpark. 
 
-While compiling the data I had to reflect on the actual definition of a superhero.  I decided to keep it to classic super hero movies with a decent theatrical release, anything that felt borderline was left out of the final tally but kept kept in the list of superhero movies by year with a question mark beside the title. An example of something borderline would be the Conan movies from the 1980's, or the Toxic Avenger B-movies from the same decade.  Conan, although a super guy in all respects originates from pulp fiction magazines in the 30's while the Toxic Avenger is a B-movie, albeit an unusually successful one.  I also ignored the full-length animated Batman movie, Mask of the Phantasm(1993), but inconsistently included MegaMind(2010), and the Incredibles(2004).  This could be my subconcious mind attemptint to skew the stats to show that, yes, there have been more superhero movies released lately.  I did, however, include comedies that are superhero themed: Meteor Man(93), Blankman(94), Mystery Men(99), My Super Ex-Girlfriend (2006). But again, Superhero Movie(2008) has been omitted, because well, I saw that one and it's really horrible and I'm hoping to save you some time.
+While compiling the data I had to reflect on the actual definition of a superhero.  I decided to keep it to classic super hero movies with a decent theatrical release, anything that felt borderline was left out of the final tally but kept in the list of superhero movies by year with a question mark beside the title. An example of something borderline would be the Conan movies from the 1980s, or the Toxic Avenger B-movies from the same decade.  Conan, although a super guy in all respects originates from pulp fiction magazines in the 30's while the Toxic Avenger is a B-movie, albeit an unusually successful one.  I also ignored the full-length animated Batman movie, Mask of the Phantasm(1993), but inconsistently included MegaMind(2010), and The Incredibles(2004).  This could be my subconcious mind attempting to skew the stats to show that, yes, there have been more superhero movies released lately.  I did, however, include comedies that are superhero themed: Meteor Man(93), Blankman(94), Mystery Men(99), My Super Ex-Girlfriend (2006). But again, Superhero Movie(2008) has been omitted, because well, I saw that one and it's really horrible and I'm hoping to save you some time.
 
 </div>
 </article>
@@ -302,7 +303,7 @@ While compiling the data I had to reflect on the actual definition of a superher
 <div class="postContent">
 
 
-After tallying the results, it appears my assumption was correct.  There are, in fact, more superhero movies lately.  We've gone from having one superhero movie a year at most in the early 80's to 3-7 superhero movies a year.  More than a three-fold increase.  Most likely, these big budget productions get big budget dollar returns.  Well, we have an interweb, lets compare production costs and revenues for all the superhero movies in the past thirty years. 
+After tallying the results, it appears my assumption was correct.  There are, in fact, more superhero movies lately.  We've gone from having one superhero movie a year at most in the early 80s to 3-7 superhero movies a year.  More than a three-fold increase.  Most likely, these big budget productions get big budget dollar returns.  Well, we have an interweb, let's compare production costs and revenues for all the superhero movies in the past thirty years. 
 
 I've tabulated the production cost and revenue return, rounded to the nearest million, hey it's not my money.  I've also divided the revenue by the cost to get an approximate rate of return.  I grabbed most of the numbers from wikipedia,  I have no idea if the numbers have been adjusted for inflation, but that's the point of the rate of return figure. A rate of return metric doesn't change based on inflation.  It definitely helps put things in perspective.  You'll read articles where people go gaga over the success of The Avengers, since it made 1.5 billion dollars.  1.5 billion isn't anything to shake a stick at but it did cost 220 million to make and garnered a 6.9 return rate.  So The Avengers is the third most successful movie if we use rate of return as our measuring stick.  Chronicle, with it's measly 12 million dollar budget and Blair Witch pseudo-documentary style film-making style had a 10.5 return rate.  You give me a dollar, I go make a movie, now we have 10.50. 
 
