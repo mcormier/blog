@@ -61,27 +61,40 @@ article > div {
 }
 
 article {
-        -moz-column-width: 80ex;
-        -moz-column-gap: 4em;
-        -moz-column-rule-width: 1px;
-        -moz-column-rule-color: #CCC;
-        -moz-column-rule-style: dashed;
+  -moz-column-width: 80ex;
+  -moz-column-gap: 4em;
+  -moz-column-rule-width: 1px;
+  -moz-column-rule-color: #CCC;
+  -moz-column-rule-style: dashed;
 
-        -webkit-column-width: 80ex;
-        -webkit-column-gap: 4em;
-        -webkit-column-rule-width: 1px;
-        -webkit-column-rule-color: #CCC;
-        -webkit-column-rule-style: dashed;
+  -webkit-column-width: 80ex;
+  -webkit-column-gap: 4em;
+  -webkit-column-rule-width: 1px;
+  -webkit-column-rule-color: #CCC;
+  -webkit-column-rule-style: dashed;
 
-        column-width: 80ex;
-        column-gap: 4em;
-        column-rule-width: 1px;
-        column-rule-color: #CCC;
-        column-rule-style: dashed;
+  column-width: 80ex;
+  column-gap: 4em;
+  column-rule-width: 1px;
+  column-rule-color: #CCC;
+  column-rule-style: dashed;
 
-        text-align: justify;
+  text-align: justify;
 }
 
+article.skinny {
+  -moz-column-width: 300px;
+  -moz-column-gap: normal;
+  -webkit-column-width: 300px;
+  -webkit-column-gap: normal;
+  column-width: 300px;
+  column-gap: normal;
+}
+
+article.skinny > div {
+ min-width:300px;
+ max-width:300px;
+}
 
 
 /*****************************************************************************/
