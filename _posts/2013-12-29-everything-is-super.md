@@ -11,8 +11,22 @@ excerpt: A look at superhero movies over the last three decades.
 
 <style>
 
-div#demographics { background-color:#EEE; text-align:center; 
+body, div.post { margin: 0; }
+div.header {margin-left:40px;}
+div.post h1, div.post p.meta { margin-left:30px;}
+
+div#demographics { background-color:#B19292; text-align:center; 
 padding-top:20px; padding-bottom:20px;}
+
+div#barGraphContainer { background-color:#8BB0C9;
+padding-top:20px; padding-bottom:20px;
+}
+
+div#barGraphContainer, div#demographics 
+{ 
+  border-top: 1px solid #000;
+  border-bottom: 1px solid #000;
+}
 
 div.nav-container div.title {
   position: relative;
@@ -40,6 +54,8 @@ div.nav-container div.title {
 #graphMetaData { 
  -webkit-transition: all 1s ease;
 position:relative; height:200px; overflow-y:scroll; 
+border: 1px solid #000;
+background-color:#FFF;
  }
 
 #superBarGraph rect { fill: steelblue; }
@@ -153,7 +169,11 @@ While compiling the data I had to reflect on the actual definition of a superher
 </article>
 </section>
 
-<div id="superBarGraph"></div>
+<div id="barGraphContainer">
+
+<h2 style="text-align:center">Superhero Movies by Year</h2>
+
+<div id="superBarGraph"/></div>
 
 <div >
   <table id="movieHeader" >
@@ -307,7 +327,7 @@ While compiling the data I had to reflect on the actual definition of a superher
 </div>
 </div>
 
-
+</div>
 
 <section>
 <article class="skinny" >
@@ -367,7 +387,7 @@ The best argument I've found to support the rash of superhero movies is demograp
 ##US/Canada Age Group Movie Demographics##
 [Source][demographics]
 
-<img src="/images/superhero/demographics.gif" />
+<img style="border:1px solid #000" src="/images/superhero/demographics.gif" />
 
 </div>
 
@@ -408,7 +428,9 @@ So seven to eight years seems to be near the limit any conserative person would 
 - [Who Goes to the Movies? Moviegoers Stats from 2010 | Women and Hollywood] [demographics]
 - [Superhero films | Wikipedia] [wikilist]
 - [Why Journalists Don't Understand Hollywood] [journalists]
+- [Willem Dafoe: Spider-Man reboot is a 'cynical approach to making money'] [dafoe]
 
 [demographics]: http://blogs.indiewire.com/womenandhollywood/who_goes_to_the_movies_moviegoers_stats_from_2010
 [wikilist]: http://en.wikipedia.org/wiki/Category:Superhero_films 
 [journalists]: http://edjayepstein.blogspot.ca/2010/01/why-journalists-dont-understand.html 
+[dafoe]:http://www.theguardian.com/film/2013/oct/04/willem-dafoe-spider-man-reboot
