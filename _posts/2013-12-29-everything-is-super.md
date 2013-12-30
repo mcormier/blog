@@ -11,6 +11,9 @@ excerpt: A look at superhero movies over the last three decades.
 
 <style>
 
+div#demographics { background-color:#EEE; text-align:center; 
+padding-top:20px; padding-bottom:20px;}
+
 div.nav-container div.title {
   position: relative;
   font-size:100%;
@@ -358,6 +361,21 @@ All this money talk doesn't completely explain an increase in superhero movies. 
 
 The best argument I've found to support the rash of superhero movies is demographics.  Traditionally younger people have more free time, disposable income, and go to the movies more often, especially in the summer when school's out (this is complete conjecture by the way).  Younger minds are also probably more apt to be swayed by flashy movie trailers (more conjecture), that show you all the good parts before you get to the theatre. Although the 12-17 and 18-24 demographics are only 11% and 12% respectively the appear to influence/drag along their parents to the movies, as somebody has to drive.  It would be interesting to see the demographic percentages broken down by season instead of tallied for the whole year.
 
+</div>
+</article>
+<div id="demographics">
+##US/Canada Age Group Movie Demographics##
+[Source][demographics]
+
+<img src="/images/superhero/demographics.gif" />
+
+</div>
+
+<article class="skinny" >
+<div class="postContent">
+
+
+
 When researching this information on the web, because everything is on the interwebs, unless it's not there. I found it difficult to find information on movies from the 70s and 80s.  I did find some interesting information about the origin of the summer blockbuster,  although most search results currently associate the word blockbuster with the former movie rental outfits recent demise.  The summer blockbuster didn't start until the mid-seventies.  People associated the summer with camping and going to the beach.  Movies were generally considered a winter time thing when the weather wasn't as agreeable.  But the release of Jaws in 1975 changed things.  It was released in the summer when people were at the beaches to make it feel more real.  With the advent of the air-conditioner, people realized that it could be enjoyable to watch a movie in the summer and the summer blockbuster was born.  A common complaint is that Hollywood is soooo forumulaic, but these formulas as generally stumbled upon accidently.  And let's be honest, if you were spending multi-millions to produce a movie what would you do?  Produce something formulaic that has a higher chance of succeeding, or take a risk on something completely unproven.
 
 ##DC versus Marvel##
@@ -386,3 +404,11 @@ So seven to eight years seems to be near the limit any conserative person would 
 </article>
 </section>
 
+##References##
+- [Who Goes to the Movies? Moviegoers Stats from 2010 | Women and Hollywood] [demographics]
+- [Superhero films | Wikipedia] [wikilist]
+- [Why Journalists Don't Understand Hollywood] [journalists]
+
+[demographics]: http://blogs.indiewire.com/womenandhollywood/who_goes_to_the_movies_moviegoers_stats_from_2010
+[wikilist]: http://en.wikipedia.org/wiki/Category:Superhero_films 
+[journalists]: http://edjayepstein.blogspot.ca/2010/01/why-journalists-dont-understand.html 
