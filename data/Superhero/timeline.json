@@ -289,6 +289,17 @@
                 }
             }
                    ,{
+                "startDate":"2000,09,22",
+                "headline":"The Specials",
+                "text":"<p>The box office take is small but it only played in two theatres.  Maybe after the Mystery Men flop no one wanted to touch a superhero parody, the R rating probably didn't help things, or the fact that it's making fun of X-Men and released the same summer. This could almost be classified as an X-Men protest movie instead of a parody. <p>",
+                "asset": {
+                    "media":"/images/superhero/Thespecialsmovie.jpg",
+                    "credit":"Production Cost: $1 million",
+                    "caption":"Box Office: $ 13,276"
+                }
+            }
+
+                   ,{
                 "startDate":"2000,11,14",
                 "headline":"Unbreakable",
                 "text":"<p>After surprising us with 'I see dead people', M. Night Shyamalan created another hit movie with a superhero theme.  In the year 2000 Shyamalan was a hot commodity, this was before the days of The Last Airbender and After Earth. <p>",
