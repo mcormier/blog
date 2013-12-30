@@ -268,6 +268,7 @@ While compiling the data I had to reflect on the actual definition of a superher
     <tr><td>Punisher: War Zone</td><td>35</td><td>10</td><td>0.29</td></tr>
     <tr><td>The Spirit</td><td>60</td><td>39</td><td>0.65</td></tr>
     <tr id="2009" class="yearRow"><td colspan=4>2009</td></tr>
+    <tr><td>Push</td><td>38</td><td>49</td><td>1.29</td></tr>
     <tr><td>Watchmen</td><td>130</td><td>185</td><td>1.42</td></tr>
     <tr><td>Dragonball: Evolution</td><td>30</td><td>57</td><td>1.9</td></tr>
     <tr><td>X-Men Origins: Wolverine</td><td>150</td><td>373</td><td>2.49</td></tr>

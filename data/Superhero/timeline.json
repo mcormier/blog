@@ -590,6 +590,17 @@
                 }
             }
                                                 ,{
+                "startDate":"2009,02,06",
+                "headline":"Push",
+                "text":"<p>The screenplay is a mess but it's worth watching for the Hong Kong scenery if you have NetFlix. <p>",
+                "asset": {
+                    "media":"/images/superhero/Pushposter08.jpg",
+                    "credit":"Production Cost: $38 million",
+                    "caption":"Box Office: $49 million"
+                }
+            }
+ 
+                                                ,{
                 "startDate":"2009,03,06",
                 "headline":"Watchmen",
                 "text":"<p>It's long at 162 minutes.  The director's cut weighs in over 3 hours at 186 minutes, and there is also an ultimate cut which is 215 minutes long.<p>",
