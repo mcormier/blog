@@ -11,6 +11,24 @@ excerpt: A look at superhero movies over the last three decades.
 
 <style>
 
+/* Customizations for dark timeline theme */
+.vco-storyjs,
+.vco-timeline .vco-navigation .timenav-background
+ { background-color:#545252; }
+
+.vco-timeline .vco-navigation .timenav-background .timenav-interval-background
+ { background:#545252; }
+
+.vco-timeline .vco-navigation .timenav .time .time-interval div.era
+{ color:#FFF; opacity:0.7; }
+
+.flag-content .thumbnail { background-image:none; }
+
+div.slider-item:first-of-type div div div.media { text-align:left; }
+.vco-slider div.slider-item:first-of-type .content-container .text { width: 100% !important; }
+div.slider-item:first-of-type h2.start[style] { width: 100% !important; }
+/* End timeline customization */
+
 body, div.post { margin: 0; }
 div.header {margin-left:40px;}
 div.post h1, div.post p.meta { margin-left:30px;}
@@ -366,7 +384,7 @@ All this money talk doesn't completely explain an increase in superhero movies. 
             embed_id:           'superheroTimeline',               //OPTIONAL USE A DIFFERENT DIV ID FOR EMBED
             //debug:              true,                           //OPTIONAL DEBUG TO CONSOLE
             maptype:            'watercolor',                   //OPTIONAL MAP STYLE
-            css:                '/js/timeline/css/timeline.css',     //OPTIONAL PATH TO CSS
+            css:                '/js/timeline/css/grey.css',     //OPTIONAL PATH TO CSS
             js:                 '/js/timeline/js/timeline-min.js'    //OPTIONAL PATH TO JS
         }
 </script>

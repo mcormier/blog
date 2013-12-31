@@ -4,7 +4,8 @@
         "headline":"Rise of the Superhero Movie",
         "type":"default",
         "text":"<p>A timeline of the last three decades.</p>",
-         "asset": { "media":"/images/superhero/dvds.jpg" },
+        "asset": { "media":"/images/superhero/dvds.jpg" },
+        "classname": "optionalclassname",
         "date": [
             {
                 "startDate":"1978,12,10",
