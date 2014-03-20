@@ -20,6 +20,8 @@
 # Distributed under the MIT license
 # Copyright Assaf Gelber 2013
 
+require 'pry'
+
 module Jekyll
   class RssFeed < Page; end
 
