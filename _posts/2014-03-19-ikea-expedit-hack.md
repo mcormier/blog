@@ -21,11 +21,11 @@ I put the light in my murse and went galavanting in search of a piece of metal t
 
 Eventually I found some candles that had metal lids which were the right size.  They also have a decorative lip, to the detriment of the dough scraper that was a close runner-up, which help to hold the base of the light in place when it is affixed to a wall. 
 
-Choosing the candle lids had the added bonus of giving my honey two smelly candles.  She likes smelly things.  Hopefully this good deed, and future ones like it, will allow me to keep building my record collection when I'm an octogenarian. I had a conversation with an older gentlemen, while waiting in line to get into a record fair, that his wife had given him an ultimatummany years ago.  "One for one", he said.  "For every record I bring into the house now, I must get rid of one". My, oh, my.
+Choosing the candle lids had the added bonus of giving my honey two smelly candles.  She likes smelly things.  Hopefully this good deed, and future ones like it, will allow me to keep building my record collection when I'm an octogenarian. I had a conversation with an older gentlemen, while waiting in line to get into a record fair, where he mentioned that his wife had given him an ultimatum many years ago.  "One for one", he said.  "For every record I bring into the house now, I must get rid of one". My, oh, my, let's pray that I find some way to walk the tight rope of music obsession and a blissful home life as the years go by.
 
 <img src="/images/ikeahack/caulking.jpg" />
 
-Since the metal candle lid is a lid, the gap between the top of the lid and the bookcase needed to be filled.  Wood and silicone my son, wood and silicone.
+Since the metal candle lid is a lid, the gap between the top of the lid and the bookcase needed to be filled.  Wood and silicone my son. Wood and silicone.
 
 <img src="/images/ikeahack/clamping.jpg" />
 
