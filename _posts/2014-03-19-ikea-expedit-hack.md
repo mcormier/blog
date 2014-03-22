@@ -15,7 +15,7 @@ Of course, moving the shelves caused another issue. There is no light for browsi
 
 I considered painting the base black to match the bookcase but opted instead to paint it silver to match the flute.  Enamel paint is a few dollars and applied it with a sponge.  Once it dried I scraped it a little with a piece of sand paper. This didn't perfectly match the brushed metal of the flute but looks better than flat paint.
 
-The base of the flute light is magnetic.  So instead of buying multiple lights and permanently affixing them to the bookcase, I decided to find several metal plates to affix to the bookcase. This would allow one light to be attached and detached in different configurartions willy nilly.  Someone told me I should patent this idea.  _What would I be patenting?_  [Magnets? How do they work?][magnets]
+The base of the flute light is magnetic.  So instead of buying multiple lights and permanently affixing them to the bookcase, I decided to find several metal plates to affix to the bookcase. This would allow one light to be attached and detached in different configurations willy nilly.  Someone told me I should patent this idea.  _What would I be patenting?_  [Magnets? How do they work?][magnets]
 
 I put the light in my murse and went galavanting in search of metal to meet my needs.  The base of the light flute is two and three quarter inches in diameter.  The first potential candidate was a mason jar lid, which was the same size.  Unfortunately, mason jar lids only have a slight metal coating on the top, the bottom is waxy, so it was not strong enough to hold the base to the wall.  I found some candle holders which worked well at holding the base, but due to their convex shape they did not work with the flute portion of the flute light.
 
