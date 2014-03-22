@@ -9,7 +9,7 @@ I recently moved my stack of Expedits.  Instead of having them against the wall,
 
 <img src="/images/ikeahack/asymetrical_expedit.jpg" />
 
-Of course, moving the shelves caused another issue. There is no light for browsing records in the new location.  _What ever could be done?_ Like any self respecting middle class Mr. Fix-It I headed down to the local cavernous box of a house fixing store and stared at LED lights for a while. **Hey! Look this one has a remote control and you can change the light color.** Eventually I settled on a Sylvania light flute.  It has a plastic base but the light is detachable. It can be used as an emergency flashlight if the power goes out. I also can detach it and wave it at the cat to create a cheap strobe light effect, which she seems quite fascinated with. However, she's also quite fascinated with boxes and grocery bags.  Meh, the life of a house cat.
+Of course, moving the shelves caused another issue. There is no light for browsing records in the new location.  _What ever could be done?_ Like any self respecting middle class Mr. Fix-It I headed down to the local cavernous box of a house fixing store and stared at LED lights for a while. "**Hey! Look this one has a remote control and you can change the light color.**" Eventually I settled on a Sylvania light flute.  It has a plastic base while the light is detachable and can be used as an emergency flashlight if the power goes out. I also can detach it and wave it at the cat to create a cheap strobe light effect, which she seems quite fascinated with. However, she's also quite fascinated with boxes and grocery bags.  Meh, the life of a house cat.
 
 <img src="/images/ikeahack/light_candle_paint.jpg" />
 
