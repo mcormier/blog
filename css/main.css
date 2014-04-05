@@ -166,7 +166,13 @@ div.title {
 
 .site .footer .contact {
   float: left;
+  width: 100%;
+}
+
+.site .footer .contact, 
+.site .footer .comments {
   margin-right: 3em;
+  margin-left: 3em;
 }
 
 .site .footer .contact a {
