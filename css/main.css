@@ -1,5 +1,6 @@
 @font-face { font-family: 'Z'; src: url('carbon.ttf'); }
 @font-face { font-family: 'W'; src: url('SpecialElite.ttf'); }
+@font-face { font-family: 'N'; src: url('NeoPrintM319.otf'); }
 
 /* @group Common */
 
@@ -204,6 +205,11 @@ div.oneColumnPost {
 div.post {
   margin-left:38px;
   margin-right:38px;
+}
+
+div.blurb div.post {
+  font: 2em  N, Helvetica, Arial, sans-serif;
+  text-shadow: -.07em .07em #AAA;
 }
 
 /* Center images in column */
