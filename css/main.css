@@ -212,6 +212,13 @@ div.blurb div.post {
   text-shadow: -.07em .07em #AAA;
 }
 
+div.blurb div.comments p {
+  width: 700px;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+
 /* Center images in column */
 div.postContent p img {
   display: block;
