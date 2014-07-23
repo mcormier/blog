@@ -12,8 +12,8 @@ body {
   font: 2em  W, Helvetica, Arial, sans-serif;
   font-size: small;
   text-align: center;
-  margin-left:10px;
-  margin-right:10px;
+  margin-left:0px;
+  margin-right:0px;
 }
 
 h1, h2, h3, h4, h5, h6 {
@@ -104,12 +104,18 @@ article.skinny > div {
 /*
 /*****************************************************************************/
 
+.toc {
+  padding-left:50px;
+}
+
 .site {
   font-size: 1.2em;
   text-align: justify;
   margin: 3em auto 2em;
   line-height: 1.5em;
 }
+
+
 
 .site .header a {
   font-weight: bold;
@@ -123,10 +129,14 @@ div.header {
 }
 
 div.title {
-  position: absolute;
-  top: 30px;
-  left: 47px;
   font-size: 2em;
+  line-height: 1em;
+  padding-top:20px;
+  padding-left:10px;
+}
+
+div.title:hover {
+  background:rgb(251,251,251);
 }
 
 .site .header h1.title {
