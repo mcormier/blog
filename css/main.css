@@ -133,10 +133,17 @@ div.title {
   line-height: 1em;
   padding-top:20px;
   padding-left:10px;
+  -webkit-transition: background-color 10s ease 3s,
+                      color 5s ease 3s, 
+                      text-shadow 1s ease; 
+
 }
 
 div.title:hover {
-  background:rgb(251,251,251);
+  background:rgb(32,32,32);
+  color:rgb(256,256,256); 
+  text-shadow: -.15em .15em #222;
+  
 }
 
 .site .header h1.title {
