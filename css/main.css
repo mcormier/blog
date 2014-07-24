@@ -41,7 +41,10 @@ ul.posts {
   list-style-type: none;
   margin-bottom: 2em;
   margin-left:40px;
+  float:left;
 }
+
+ul.posts.blurb-posts { }
 
 ul.posts li {
   line-height: 1.75em;
@@ -128,6 +131,10 @@ div.header {
   margin-bottom:40px;
 }
 
+ul.posts span.category {
+  font-size: 1.2em;
+}
+
 div.title {
   font-size: 2em;
   line-height: 1em;
@@ -144,7 +151,7 @@ div.title:hover {
   color:rgb(256,256,256); 
   text-shadow: -.13em .13em #222;
   
-  /* The transition when hovering over */  
+  /* The transition on mouse in */  
   -webkit-transition: background-color 10s ease 3s,
                       color 5s ease 3s, 
                       text-shadow 1s ease; 
@@ -177,6 +184,8 @@ div.title:hover {
 .site .meta {
   color: #aaa;
 }
+
+div.footer { clear: both; }
 
 .site .footer {
   font-size: 80%;

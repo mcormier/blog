@@ -5,13 +5,31 @@ title: Not Cocoa Mondo
 
 <div id="home">
   <ul class="posts">
+      <li><span class="category">Fairly Trivial</span></li>
     {% for post in site.posts %}
+    {%    if post.layout != 'blurb' %}
       <li>
           <span class="pub_date">{{ post.date | date_to_string }}</span>  
           <span class="title">
              <a href="{{ post.url }}">{{ post.title }}</a>
           </span>
       </li>
-    {% endfor %}
+    {%  endif  %}
+    {%  endfor %}
   </ul>
+
+  <ul class="posts blurb-posts">
+      <li><span class="category">Very Trivial</span></li>
+    {% for post in site.posts %}
+    {%    if post.layout == 'blurb' %}
+      <li>
+          <span class="pub_date">{{ post.date | date_to_string }}</span>  
+          <span class="title">
+             <a href="{{ post.url }}">{{ post.title }}</a>
+          </span>
+      </li>
+    {%  endif  %}
+    {%  endfor %}
+  </ul>
+
 </div>
