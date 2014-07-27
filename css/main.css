@@ -17,7 +17,7 @@ body {
 }
 
 h1, h2, h3, h4, h5, h6 {
-  font: 100%  Z, Helvetica, Arial, sans-serif;
+  font: 100%  W, Helvetica, Arial, sans-serif;
   margin-bottom: 1em;
 }
 
@@ -26,9 +26,30 @@ h2 { margin-top: 20px; font-size: 1.3em; }
 
 p { margin: 1em 0; }
 
+
+
 a         { text-decoration:none; color:#4F7A8F; }
-a:hover   { color: #000; text-decoration:underline;}
-a:visited { color:#4F7A8F; }
+a:hover   { }
+
+
+a:visited { text-decoration:none; color:#4F7A8F; }
+
+div.toc span.title a { font: 1.2em  W, Helvetica, Arial, sans-serif; }
+
+div.toc span.title a:hover {
+  color: #FFF !important; /* overides visited during hover */ 
+  background:#000;
+  padding: 5px;
+  border-style:solid;
+  border-color:#457A8F;
+  border-width:1px;
+  -webkit-border-radius: 5px;
+
+  -webkit-transition: background-color 2.5s ease 0.3s,
+                      color 1.25s ease 0.3s, 
+                      padding 0.3s ease; 
+}
+
 
 /* @end */
 
@@ -121,10 +142,9 @@ article.skinny > div {
   text-decoration: none;
 }
 
-div.header {
+.header {
   font-size:2em;
   position: relative;
-  margin-bottom:40px;
 }
 
 div.toc div.header { 
@@ -133,11 +153,14 @@ div.toc div.header {
   line-height:1em;
   color:rgb(205,205,205);
   padding-top:20px;
-  padding-left:20px;
+  padding-left:80px;
 }
 
+span.category { padding-bottom:20px;}
+
 ul.posts span.category {
-  font-size: 1.2em;
+  font: 2em  N, Helvetica, Arial, sans-serif;
+  color:#000;
 }
 
 div.title {
@@ -240,6 +263,7 @@ div.oneColumnPost {
 div.post {
   margin-left:38px;
   margin-right:38px;
+  margin-top:40px;
 }
 
 div.blurb div.post {
