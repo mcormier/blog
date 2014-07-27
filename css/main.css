@@ -26,9 +26,9 @@ h2 { margin-top: 20px; font-size: 1.3em; }
 
 p { margin: 1em 0; }
 
-a         { text-decoration:none; color:#08C; }
+a         { text-decoration:none; color:#4F7A8F; }
 a:hover   { color: #000; text-decoration:underline;}
-a:visited { color:#08C; }
+a:visited { color:#4F7A8F; }
 
 /* @end */
 
