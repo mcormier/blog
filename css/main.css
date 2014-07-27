@@ -26,12 +26,10 @@ h2 { margin-top: 20px; font-size: 1.3em; }
 
 p { margin: 1em 0; }
 
-
-
+/* @end */
+/* @group Links */
 a         { text-decoration:none; color:#4F7A8F; }
 a:hover   { }
-
-
 a:visited { text-decoration:none; color:#4F7A8F; }
 
 div.toc span.title a { font: 1.2em  W, Helvetica, Arial, sans-serif; }
@@ -39,7 +37,7 @@ div.toc span.title a { font: 1.2em  W, Helvetica, Arial, sans-serif; }
 div.toc span.title a:hover {
   color: #FFF !important; /* overides visited during hover */ 
   background:#000;
-  padding: 5px;
+  padding: 5px 5px 2px 5px;
   border-style:solid;
   border-color:#457A8F;
   border-width:1px;
@@ -50,19 +48,20 @@ div.toc span.title a:hover {
                       padding 0.3s ease; 
 }
 
+div.toc span.title a {
+  -webkit-transition: background-color 0.3s ease ,
+                      color 0.3s ease , 
+                      padding 0.3s ease; 
+}
 
 /* @end */
-
-/*****************************************************************************/
-/*
-/* Home
-/*
-/*****************************************************************************/
+/* @group Home */
 ul.posts {
   list-style-type: none;
   margin-bottom: 2em;
   margin-left:40px;
   float:left;
+  width:500px;
 }
 
 ul.posts.blurb-posts { }
@@ -120,14 +119,8 @@ article.skinny > div {
  min-width:300px;
  max-width:300px;
 }
-
-
-/*****************************************************************************/
-/*
-/* Site
-/*
-/*****************************************************************************/
-
+/* @end */
+/* @group Site  */
 .site {
   font-size: 1.2em;
   text-align: justify;
@@ -248,12 +241,9 @@ div.footer { clear: both; }
   border: 0;
 }
 
-/*****************************************************************************/
-/*
-/* Posts
-/*
-/*****************************************************************************/
 
+/* @end */
+/* @group Posts */
 div.oneColumnPost {
   width: 700px;
   margin-left: auto;
@@ -322,6 +312,8 @@ div.postContent p img {
 .post pre.terminal code {
   background-color: #333;
 }
+
+/* @end */
 
 /* vim: set foldmethod=marker:
  * vim: set foldmarker=@group,@end:
