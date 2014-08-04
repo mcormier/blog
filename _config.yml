@@ -3,7 +3,7 @@ markdown: redcarpet
 destination: /home/mcormier/sites/weblog
 pygments: true
 permalink: /:year/:title.html
-exclude: [monitor.sh, desktop.sh]
+exclude: [monitor.sh, desktop.sh, edit.rb]
 
 # For the RSS generator
 url: http://weblog.preenandprune.com
