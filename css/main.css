@@ -294,6 +294,8 @@ div.postContent p img {
   margin-bottom: 15px;
 }
 
+span.redacted { background-color:black; }
+
 /* standard */
 .post pre {
   border: 1px solid #ddd;
