@@ -8,6 +8,16 @@
         <link rel="stylesheet" href="/css/syntax.css">
         <link rel="stylesheet" href="/css/main.css">
 
+        {% if page.style %}
+          <link rel="stylesheet" href="{{page.style}}">
+        {% endif %}
+
+        {% if page.customStyle %}
+          <style type="text/css">
+            {{ page.customStyle }}
+          </style>
+        {% endif %}
+
     </head>
     <body>
 
