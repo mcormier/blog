@@ -1,6 +1,8 @@
 #!/usr/bin/env ruby
 
+gem 'ppcurses', '=0.0.25'
 require 'ppcurses'
+
 require 'highline/import'
 
 class ScriptMenu < PPCurses::Menu
@@ -40,12 +42,20 @@ def create_new_draft_file ( title )
   now = DateTime.now
   day_str = now.strftime("%F") 
   file_name = '_drafts/' + day_str + '-' + title.gsub(/\s/,'-') + '.md'
+
+  isBlurbVal = ask "Blurb (Y/N)?"
+
+  isBlurb = isBlurbVal.casecmp("Y") == 0
  
   File.open(file_name, "w") { |f|
     f.write("---\n") 
     f.write("title: " + title + "\n") 
-    f.write("layout: post\n") 
-    f.write("type: post\n") 
+    if isBlurb 
+      f.write("layout: blurb\n") 
+    else
+      f.write("layout: post\n") 
+      f.write("type: post\n") 
+    end
     f.write("\n---\n") 
   } 
 
