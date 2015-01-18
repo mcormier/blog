@@ -336,23 +336,7 @@ span.redacted { background-color:black; }
 
 /* @end */
 
-/* Retina iPad style tweaks.  All the ex measurements need to be
- * doubled on a retina display.  This may be webkit bug.  */
-@media all and (-webkit-min-device-pixel-ratio: 2) {
-article > div {
- min-width:160ex;
- max-width:160ex; 
-} 
 
-article {
-  -webkit-column-width: 160ex;
-}
-
-div.postContent p img {
-  max-width: 160ex;
-}
-
-}
 
 
 /* vim: set foldmethod=marker:
